@@ -2,4 +2,6 @@
     <string name="app_name">Android_Sport_project</string>
     <string name="Splash">Splash Screen!</string>
     <string name="button">Волейбол</string>
+    <string name="button1">Футбол</string>
+    <string name="button3">Баскетбол</string>
 </resources>
