@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -8,11 +7,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="some_id">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">#FFFCFC</item>
+    </style>
+    <style name="some_id4">
         <item name="android:textSize">
-            50sp
+            20sp
         </item>
         <item name="android:textColor">
-            #FFFCFC
+            #981E19
         </item>
     </style>
 </resources>

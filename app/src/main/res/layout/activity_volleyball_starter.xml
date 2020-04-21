@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg4"
     tools:context=".game_start.VolleyballStarter">
 
     <TextView
@@ -11,15 +12,17 @@
         android:layout_width="364dp"
         android:layout_height="39dp"
         android:text="ФОРМА ГДЕ ВВОДЯТ НАЗВАНИЕ КОМАНДЫ ВОЛЕЙБОЛЛ"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="56dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="103dp" />
 
     <Button
         android:id="@+id/VbCounter"
-        android:layout_width="163dp"
-        android:layout_height="66dp"
+        android:layout_width="202dp"
+        android:layout_height="35dp"
+        android:background="@drawable/rectangle_1"
         android:text="НАЧАТЬ ИГРУ"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="267dp" />
+        android:textAppearance="@style/some_id4"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="455dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
