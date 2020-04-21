@@ -4,19 +4,19 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/VRbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/FRbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button1" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/BRbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button3" />

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".game_start.BasketballStarter">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="308dp"
+        android:layout_height="46dp"
+        android:text="ФОРМА ГДЕ ВВОДЯТ НАЗВАНИЕ КОМАНДЫ БАСКЕТБОЛЛ"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/BbCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="НАЧАТЬ ИГРУ"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="161dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

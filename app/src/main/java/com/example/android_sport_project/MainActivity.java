@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import java.util.Objects;
 
@@ -40,4 +41,5 @@ public class MainActivity extends AppCompatActivity {
         splash_time.start();
 
     }
+
 }

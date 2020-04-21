@@ -1,8 +1,15 @@
 package com.example.android_sport_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.app.Activity;
+import android.view.View;
+import android.widget.Button;
+
+import com.example.android_sport_project.rules.BasketballRules;
+import com.example.android_sport_project.rules.FootballRules;
+import com.example.android_sport_project.rules.VolleyballRules;
 
 
 public class Menu extends Activity {
@@ -11,5 +18,32 @@ public class Menu extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_layout);
+
+        Button fbRules = (Button) findViewById(R.id.FRbutton);
+        fbRules.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), FootballRules.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        Button bbRules = (Button) findViewById(R.id.BRbutton);
+        bbRules.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), BasketballRules.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        Button VbRules = (Button) findViewById(R.id.VRbutton);
+        VbRules.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), VolleyballRules.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
     }
+
+
+
 }
