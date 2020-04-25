@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="86dp"
         android:layout_marginTop="-5dp"
-        app:srcCompat="@drawable/shapka" />
+        app:srcCompat="@drawable/shapka"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -33,7 +33,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:linksClickable="false"
-        android:text="Лига чемпионов"
+        android:text="@string/match_name"
         android:textColor="#938E8E"
         android:textColorHint="#8BC34A"
         android:textColorLink="#E91E63" />
@@ -55,7 +55,7 @@
         android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Название команды"
+        android:text="@string/team_name"
         android:textColor="#918787" />
 
     <TextView
@@ -75,7 +75,7 @@
         android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Название команды"
+        android:text="@string/team_name"
         android:textColor="#918686" />
 
     <Button

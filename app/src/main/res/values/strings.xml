@@ -8,4 +8,6 @@
     <string name="mach_name">Название матча</string>
     <string name="team1">Команда №1</string>
     <string name="team2">Команда №2</string>
+    <string name="match_name">Лига чемпионов</string>
+    <string name="team_name">Название команды</string>
 </resources>
