@@ -8,20 +8,28 @@
     android:background="@drawable/bg4"
     tools:context=".game_start.VolleyballStarter">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="-5dp"
+        app:srcCompat="@drawable/shapka" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="40dp"
         android:text="@string/mach_name"
         android:textAppearance="@style/Text1_Screen4"/>
 
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:linksClickable="false"
@@ -32,14 +40,19 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="Команда №1" />
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/team1"
+        android:textAppearance="@style/Text1_Screen4"/>
+
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Название команды"
@@ -47,14 +60,19 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Команда №2" />
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/team2"
+        android:textAppearance="@style/Text1_Screen4"/>
+
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="match_parent"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Название команды"
