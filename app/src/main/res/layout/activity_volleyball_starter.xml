@@ -15,7 +15,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="105dp"
         android:text="@string/mach_name"
-        android:textAppearance="@vol/"/>
+        android:textAppearance="@style/Text1_Screen4"/>
 
 
     <EditText
@@ -66,7 +66,7 @@
         android:layout_height="35dp"
         android:background="@drawable/rectangle_1"
         android:text="НАЧАТЬ ИГРУ"
-        android:textAppearance="@style/Screen4"
+        android:textAppearance="@style/Button_Screen4"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="90dp"
         android:layout_alignParentTop="true"
