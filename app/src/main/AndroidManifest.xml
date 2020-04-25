@@ -12,7 +12,7 @@
         <activity android:name=".game_counter.VolleyballCounter"></activity>
         <activity android:name=".game_counter.BasketballCounter" />
         <activity android:name=".game_counter.FootballCounter" />
-        <activity android:name=".game_start.VolleyballStarter" />
+        <activity android:theme="@style/Screen4" android:name=".game_start.VolleyballStarter" />
         <activity android:name=".game_start.BasketballStarter" />
         <activity android:name=".game_start.FootballStarter" />
         <activity android:name=".rules.VolleyballRules" />

@@ -5,4 +5,5 @@
     <string name="button1">Футбол</string>
     <string name="button3">Баскетбол</string>
     <string name="some_id">cпортТАБЛО</string>
+    <string name="mach_name">Название матча</string>
 </resources>

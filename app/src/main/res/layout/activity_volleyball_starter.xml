@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg4"
     tools:context=".game_start.VolleyballStarter">
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="364dp"
-        android:layout_height="39dp"
-        android:text="ФОРМА ГДЕ ВВОДЯТ НАЗВАНИЕ КОМАНДЫ ВОЛЕЙБОЛЛ"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="103dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="105dp"
+        android:text="@string/mach_name"
+        android:textAppearance="@vol/"/>
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:linksClickable="false"
+        android:text="Лига чемпионов"
+        android:textColor="#938E8E"
+        android:textColorHint="#8BC34A"
+        android:textColorLink="#E91E63" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Команда №1" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Название команды"
+        android:textColor="#918787" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Команда №2" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Название команды"
+        android:textColor="#918686" />
 
     <Button
         android:id="@+id/VbCounter"
@@ -20,8 +66,10 @@
         android:layout_height="35dp"
         android:background="@drawable/rectangle_1"
         android:text="НАЧАТЬ ИГРУ"
-        android:textAppearance="@style/some_id4"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="455dp" />
+        android:textAppearance="@style/Screen4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
