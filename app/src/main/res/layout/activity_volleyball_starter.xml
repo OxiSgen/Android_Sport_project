@@ -33,9 +33,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:linksClickable="false"
-        android:text="@string/match_name"
-        android:textColor="#938E8E"
-        android:textColorHint="#8BC34A"
+        android:hint="@string/match_name"
+        android:textColor="#000000"
         android:textColorLink="#E91E63" />
 
     <TextView
@@ -55,8 +54,8 @@
         android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/team_name"
-        android:textColor="#918787" />
+        android:hint="@string/team_name"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/textView9"
@@ -75,8 +74,8 @@
         android:layout_marginStart="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/team_name"
-        android:textColor="#918686" />
+        android:hint="@string/team_name"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/VbCounter"
