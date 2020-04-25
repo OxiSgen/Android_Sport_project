@@ -10,4 +10,5 @@
     <string name="team2">Команда №2</string>
     <string name="match_name">Лига чемпионов</string>
     <string name="team_name">Название команды</string>
+    <string name="start_game">НАЧАТЬ ИГРУ</string>
 </resources>
