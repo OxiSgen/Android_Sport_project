@@ -21,10 +21,7 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="some_id">
-        <item name="android:textSize">50sp</item>
-        <item name="android:textColor">#FFFCFC</item>
-    </style>
+
 
     <style name="Button_Screen4">
         <item name="android:textSize">

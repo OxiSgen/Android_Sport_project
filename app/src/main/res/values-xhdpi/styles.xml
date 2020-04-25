@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="some_id">
+        <item name="android:textSize">45sp</item>
+        <item name="android:textColor">#FFFCFC</item>
+    </style>
+</resources>
