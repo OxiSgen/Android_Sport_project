@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.android_sport_project.rules.BasketballRules;
 import com.example.android_sport_project.rules.FootballRules;
 import com.example.android_sport_project.rules.VolleyballRules;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class Menu extends Activity {
@@ -39,6 +40,14 @@ public class Menu extends Activity {
         VbRules.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), VolleyballRules.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        FloatingActionButton fabb =  findViewById(R.id.fab);
+        fabb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), Results.class);
                 startActivityForResult(myIntent, 0);
             }
         });

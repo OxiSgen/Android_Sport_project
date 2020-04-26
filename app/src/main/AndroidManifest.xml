@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
+        <activity android:theme="@style/result_table" android:name=".Results" />
     </application>
 
 </manifest>
