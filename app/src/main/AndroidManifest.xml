@@ -4,18 +4,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".game_counter.VolleyballCounter"></activity>
         <activity android:name=".game_counter.BasketballCounter" />
         <activity android:name=".game_counter.FootballCounter" />
-        <activity  android:theme="@style/AppTheme4" android:name=".game_start.VolleyballStarter" />
+        <activity android:theme="@style/AppTheme4" android:name=".game_start.VolleyballStarter" />
         <activity android:name=".game_start.BasketballStarter" />
         <activity android:name=".game_start.FootballStarter" />
-        <activity android:name=".rules.VolleyballRules" />
+        <activity android:theme="@style/AppTheme4" android:name=".rules.VolleyballRules" />
         <activity android:name=".rules.BasketballRules" />
         <activity android:name=".rules.FootballRules" />
         <activity android:name=".MainActivity">
