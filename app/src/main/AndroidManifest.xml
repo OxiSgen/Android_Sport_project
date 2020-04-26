@@ -7,15 +7,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".game_counter.VolleyballCounter"></activity>
-        <activity android:name=".game_counter.BasketballCounter" />
-        <activity android:name=".game_counter.FootballCounter" />
+        <activity android:theme="@style/AppTheme4" android:name=".game_counter.VolleyballCounter"/>
+        <activity android:theme="@style/AppTheme4" android:name=".game_counter.BasketballCounter" />
+        <activity android:theme="@style/AppTheme4" android:name=".game_counter.FootballCounter" />
         <activity android:theme="@style/AppTheme4" android:name=".game_start.VolleyballStarter" />
-        <activity android:name=".game_start.BasketballStarter" />
-        <activity android:name=".game_start.FootballStarter" />
+        <activity android:theme="@style/AppTheme4" android:name=".game_start.BasketballStarter" />
+        <activity android:theme="@style/AppTheme4" android:name=".game_start.FootballStarter" />
         <activity android:theme="@style/AppTheme4" android:name=".rules.VolleyballRules" />
-        <activity android:name=".rules.BasketballRules" />
-        <activity android:name=".rules.FootballRules" />
+        <activity android:theme="@style/AppTheme4" android:name=".rules.BasketballRules" />
+        <activity android:theme="@style/AppTheme4" android:name=".rules.FootballRules" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu" />
+        <activity android:theme="@style/AppTheme4" android:name=".Menu" />
         <activity android:theme="@style/result_table" android:name=".Results" />
     </application>
 
