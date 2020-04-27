@@ -65,7 +65,7 @@
         android:layout_marginRight="1dp"
         android:background="@drawable/basketball_button" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="10dp">
@@ -85,5 +85,6 @@
             app:srcCompat="@drawable/emoji_events" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </RelativeLayout>
