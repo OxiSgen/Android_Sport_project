@@ -54,7 +54,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/MatchNameStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -76,7 +76,7 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/FirstTeamStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -97,7 +97,7 @@
 
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/SecondTeamStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"

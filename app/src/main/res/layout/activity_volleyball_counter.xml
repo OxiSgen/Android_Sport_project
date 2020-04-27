@@ -6,11 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".game_counter.VolleyballCounter">
 
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/AddOnePointToFirstTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ТУТ БУДЕТ СЧЁТЧИК ВОЛЕЙБОЛЛ"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="40dp" />
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="380dp"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/RemoveOnePointFromFirstTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="276dp"
+        android:text="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/AddOnePointToSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="380dp"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/RemoveOnePointFromSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="272dp"
+        android:text="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/EndMatch"
+        android:layout_width="148dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="140dp"
+        android:text="Закончить матч"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/FirstTeamCounter"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="508dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SecondTeamCounter"
+        android:layout_width="69dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="508dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TeamOneName"
+        android:layout_width="68dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TeamTwoName"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/MatchName"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
