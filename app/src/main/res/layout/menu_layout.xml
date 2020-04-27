@@ -43,25 +43,25 @@
     <Button
         android:id="@+id/VRbutton"
         android:layout_width="431dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="90dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="85dp"
         android:layout_marginRight="1dp"
         android:background="@drawable/volleyball_button1" />
     <Button
         android:id="@+id/BRbutton"
         android:layout_width="431dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="290dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="275dp"
         android:layout_marginRight="1dp"
         android:background="@drawable/football_button" />
     <Button
         android:id="@+id/FRbutton"
         android:layout_width="431dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="510dp"
+        android:layout_height="190dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="480dp"
         android:layout_marginRight="1dp"
         android:background="@drawable/basketball_button" />
 
