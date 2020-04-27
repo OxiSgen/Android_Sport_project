@@ -16,7 +16,7 @@ import com.example.android_sport_project.rules.VolleyballRules;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class Menu extends  AppCompatActivity {
+public class Menu extends AppCompatActivity {
 
 
 
