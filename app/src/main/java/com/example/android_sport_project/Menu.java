@@ -1,5 +1,7 @@
 package com.example.android_sport_project;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
