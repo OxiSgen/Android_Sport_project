@@ -59,10 +59,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +99,7 @@
                 android:layout_marginRight="10dp"
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="10dp"
-                android:showDividers="beginning | middle"
+                android:showDividers="beginning|middle"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -161,7 +158,7 @@
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="5dp"
                 android:orientation="horizontal"
-                android:showDividers="beginning | middle">
+                android:showDividers="beginning|middle">
 
                 <LinearLayout
                     android:layout_width="match_parent"

@@ -8,13 +8,15 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.android_sport_project.rules.BasketballRules;
 import com.example.android_sport_project.rules.FootballRules;
 import com.example.android_sport_project.rules.VolleyballRules;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class Menu extends Activity {
+public class Menu extends AppCompatActivity {
 
 
 
