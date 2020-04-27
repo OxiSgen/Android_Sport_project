@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="119dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/volleyball_button1" />
 
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="119dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/football_button" />
 
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="119dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="330dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/basketball_button" />
 

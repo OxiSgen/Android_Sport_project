@@ -1,5 +1,7 @@
 package com.example.android_sport_project;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +16,7 @@ import com.example.android_sport_project.rules.VolleyballRules;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class Menu extends Activity {
+public class Menu extends  AppCompatActivity {
 
 
 
