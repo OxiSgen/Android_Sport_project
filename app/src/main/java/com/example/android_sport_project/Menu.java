@@ -2,7 +2,9 @@ package com.example.android_sport_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.android_sport_project.rules.BasketballRules;
 import com.example.android_sport_project.rules.FootballRules;
@@ -20,7 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Menu extends AppCompatActivity {
 
-
+    Dialog exitDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,9 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Results.class);
                 startActivityForResult(myIntent, 0);
+
             }
+
         });
 
     }
