@@ -27,9 +27,10 @@ public class VolleyballStarter extends AppCompatActivity {
         Button vbCounter = (Button) findViewById(R.id.VbCounter);
         vbCounter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                VolleyballCounter.matchName =  String.valueOf(startMatchName.getText());
-                VolleyballCounter.firstTeamName =  String.valueOf(startFirstTeamName.getText());
-                VolleyballCounter.secondTeamName = String.valueOf(startSecondTeamName.getText());
+                VolleyballCounter.volleyballGame.setFirstTeamName( String.valueOf(startFirstTeamName.getText()));
+                VolleyballCounter.volleyballGame.setSecondTeamName(String.valueOf(startSecondTeamName.getText()));
+                VolleyballCounter.volleyballGame.setMatchName(String.valueOf(startMatchName.getText()));
+
                 Intent myIntent = new Intent(view.getContext(), VolleyballCounter.class);
                 startActivityForResult(myIntent, 0);
             }
