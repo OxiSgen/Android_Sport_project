@@ -10,15 +10,19 @@
         android:id="@+id/FRtextView"
         android:layout_width="255dp"
         android:layout_height="67dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="52dp"
         android:text="Football Rules"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/FbStartGame"
         android:layout_width="265dp"
         android:layout_height="55dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="244dp"
         android:text="ПЕРЕЙТИ К ИГРЕ"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="148dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

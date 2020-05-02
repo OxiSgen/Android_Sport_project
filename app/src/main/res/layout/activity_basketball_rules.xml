@@ -10,15 +10,19 @@
         android:id="@+id/BBtextView"
         android:layout_width="312dp"
         android:layout_height="39dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="88dp"
         android:text="BASKETBALL RULES"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="31dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BbStarter"
         android:layout_width="148dp"
         android:layout_height="71dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="308dp"
         android:text="ПЕРЕЙТИ  К ИГРЕ"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="227dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
