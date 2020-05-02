@@ -7,9 +7,16 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android_sport_project.R;
+import com.example.android_sport_project.helpers.JsonHelper;
 import com.example.android_sport_project.model.SportGame;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class VolleyballCounter extends AppCompatActivity {
     private TextView counterFirstTeam;
@@ -27,8 +34,9 @@ public class VolleyballCounter extends AppCompatActivity {
     private boolean running;
 
     public static SportGame volleyballGame = new SportGame();
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volleyball_counter);
         firstTeamCounter = 0;
@@ -93,45 +101,57 @@ public class VolleyballCounter extends AppCompatActivity {
         Button pauseGame = (Button) findViewById(R.id.PauseGame);
         pauseGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                running=!running;
+                running = !running;
             }
         });
 
         Button endGame = (Button) findViewById(R.id.EndMatch);
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                running=false;
+                running = false;
+                saveGame();
             }
         });
 
 
     }
 
-    private void timerGameRun(){
+    private void timerGameRun() {
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int hours = seconds/3600;
-                int minutes = (seconds%3600)/60;
-                int secon = seconds%60;
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secon = seconds % 60;
 
                 time = String.format("%d:%02d:%02d", hours, minutes, secon);
                 gameTimer.setText(time);
-                if(running){
+                if (running) {
                     seconds++;
                 }
-                 handler.postDelayed(this, 1000);
+                handler.postDelayed(this, 1000);
             }
         });
     }
 
-    private void saveGame(){
+    private void saveGame() {
         VolleyballCounter.volleyballGame.setFirstTeamCount(firstTeamCounter);
         VolleyballCounter.volleyballGame.setSecondTeamCount(secondTeamCounter);
         VolleyballCounter.volleyballGame.setGameType(1);//Для волейболла тип 1
         VolleyballCounter.volleyballGame.setGameTime(time);
-        //Тут будет кусок про пихание в JSON
+
+        // Текущее время
+        Date currentDate = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+        volleyballGame.setGameDate(dateFormat.format(currentDate));
+
+        boolean result = JsonHelper.addToJsonFile(volleyballGame, this);
+        if (result) {
+            Toast.makeText(this, "Данные сохранены", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Не удалось сохранить данные", Toast.LENGTH_LONG).show();
+        }
     }
 
 }

@@ -5,12 +5,55 @@ import android.content.Context;
 import com.example.android_sport_project.model.SportGame;
 import com.google.gson.Gson;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonHelper {
-    static boolean exportToJSON(Context context, List<SportGame> dataList){
+    private static Gson gson = new Gson();
 
-        Gson gson = new Gson();
-        return false;
+    public static boolean addToJsonFile(SportGame sportGame, Context context) {
+
+        //DataItem dataItem = gson.fromJson(DataHelperSave.read(context),DataItem.class);
+
+        try {
+            DataItem dataItem = fromJsonFile(context);
+            if (dataItem == null) {
+                dataItem = new DataItem();
+                dataItem.getSportGames().add(sportGame);
+            } else {
+                dataItem.getSportGames().add(sportGame);
+            }
+
+
+            String jsonResult = gson.toJson(dataItem);
+            DataHelperSave.create(context, jsonResult);
+            return true;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+    public static DataItem fromJsonFile(Context context) {
+        String jsonStringFromFile = DataHelperSave.read(context);
+        DataItem dataItem = gson.fromJson(DataHelperSave.read(context), DataItem.class);
+
+        return dataItem;
+    }
+
+    public static class DataItem {
+        List<SportGame> sportGames;
+        public DataItem() {
+            this.sportGames = new ArrayList<>();
+        }
+        public List<SportGame> getSportGames() {
+            return sportGames;
+        }
+        public void setSportGames(List<SportGame> sportGames) {
+            this.sportGames = sportGames;
+        }
     }
 }
+
+
