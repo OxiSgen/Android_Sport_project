@@ -1,9 +1,11 @@
 package com.example.android_sport_project.model;
 
+import androidx.annotation.NonNull;
+
 public class SportGame {
     private String firstTeamName;
     private String secondTeamName;
-    private String MatchName;
+    private String matchName;
     private int gameType; //1-воллейболл, 2-футболл, 3-баскетболл
     private int firstTeamCount;
     private int secondTeamCount;
@@ -27,11 +29,11 @@ public class SportGame {
     }
 
     public String getMatchName() {
-        return MatchName;
+        return matchName;
     }
 
     public void setMatchName(String matchName) {
-        MatchName = matchName;
+        this.matchName = matchName;
     }
 
     public int getGameType() {
@@ -79,7 +81,7 @@ public class SportGame {
         return "SportGame{" +
                 "firstTeamName='" + firstTeamName + '\'' +
                 ", secondTeamName='" + secondTeamName + '\'' +
-                ", MatchName='" + MatchName + '\'' +
+                ", matchName='" + matchName + '\'' +
                 ", gameType=" + gameType +
                 ", firstTeamCount=" + firstTeamCount +
                 ", secondTeamCount=" + secondTeamCount +
