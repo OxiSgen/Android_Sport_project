@@ -5,13 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.android_sport_project.helpers.DataHelperSave;
+import com.example.android_sport_project.helpers.JsonHelper;
+import com.example.android_sport_project.model.SportGame;
+import com.google.gson.Gson;
+
+import java.util.List;
 
 public class Results extends AppCompatActivity {
 private TextView result;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
