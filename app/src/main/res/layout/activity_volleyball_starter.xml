@@ -54,7 +54,7 @@
 
 
     <EditText
-        android:id="@+id/MatchNameStart"
+        android:id="@+id/VolleyballMatchNameStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -76,7 +76,7 @@
 
 
     <EditText
-        android:id="@+id/FirstTeamStart"
+        android:id="@+id/VolleyballFirstTeamStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -97,7 +97,7 @@
 
 
     <EditText
-        android:id="@+id/SecondTeamStart"
+        android:id="@+id/VolleyballSecondTeamStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
