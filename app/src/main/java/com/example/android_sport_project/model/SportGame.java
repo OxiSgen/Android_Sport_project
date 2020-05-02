@@ -8,6 +8,7 @@ public class SportGame {
     private int firstTeamCount;
     private int secondTeamCount;
     private String gameTime;
+    private String gameDate;
 
     public String getFirstTeamName() {
         return firstTeamName;
@@ -63,5 +64,27 @@ public class SportGame {
 
     public void setGameTime(String gameTime) {
         this.gameTime = gameTime;
+    }
+
+    public String getGameDate() {
+        return gameDate;
+    }
+
+    public void setGameDate(String gameDate) {
+        this.gameDate = gameDate;
+    }
+
+    @Override
+    public String toString() {
+        return "SportGame{" +
+                "firstTeamName='" + firstTeamName + '\'' +
+                ", secondTeamName='" + secondTeamName + '\'' +
+                ", MatchName='" + MatchName + '\'' +
+                ", gameType=" + gameType +
+                ", firstTeamCount=" + firstTeamCount +
+                ", secondTeamCount=" + secondTeamCount +
+                ", gameTime='" + gameTime + '\'' +
+                ", gameDate='" + gameDate + '\'' +
+                '}';
     }
 }
