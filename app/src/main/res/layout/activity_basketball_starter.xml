@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".game_start.BasketballStarter">
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -41,19 +43,24 @@
             android:textAppearance="@style/shapka" />
 
     </RelativeLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="308dp"
         android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="92dp"
         android:text="ФОРМА ГДЕ ВВОДЯТ НАЗВАНИЕ КОМАНДЫ БАСКЕТБОЛЛ"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BbCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="268dp"
         android:text="НАЧАТЬ ИГРУ"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

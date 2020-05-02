@@ -20,9 +20,9 @@ public class VolleyballStarter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volleyball_starter);
-        startMatchName = (EditText) findViewById(R.id.MatchNameStart);
-        startFirstTeamName = (EditText) findViewById(R.id.FirstTeamStart);
-        startSecondTeamName = (EditText) findViewById(R.id.SecondTeamStart);
+        startMatchName = (EditText) findViewById(R.id.VolleyballMatchNameStart);
+        startFirstTeamName = (EditText) findViewById(R.id.VolleyballFirstTeamStart);
+        startSecondTeamName = (EditText) findViewById(R.id.VolleyballSecondTeamStart);
 
         Button vbCounter = (Button) findViewById(R.id.VbCounter);
         vbCounter.setOnClickListener(new View.OnClickListener() {

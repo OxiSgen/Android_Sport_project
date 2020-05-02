@@ -45,12 +45,12 @@ public class VolleyballCounter extends AppCompatActivity {
         MIN = 0;
         running = true;
 
-        counterFirstTeam = (TextView) findViewById(R.id.FirstTeamCounter);
-        counterSecondTeam = (TextView) findViewById(R.id.SecondTeamCounter);
-        matchNameView = (TextView) findViewById(R.id.MatchName);
-        firstTeamNameView = (TextView) findViewById(R.id.TeamOneName);
-        secondTeamNameView = (TextView) findViewById(R.id.TeamTwoName);
-        gameTimer = (TextView) findViewById(R.id.GameTimer);
+        counterFirstTeam = (TextView) findViewById(R.id.FirstVolleyballTeamCounter);
+        counterSecondTeam = (TextView) findViewById(R.id.SecondVolleyballTeamCounter);
+        matchNameView = (TextView) findViewById(R.id.VolleyballMatchName);
+        firstTeamNameView = (TextView) findViewById(R.id.VolleyballTeamOneName);
+        secondTeamNameView = (TextView) findViewById(R.id.VolleyballTeamTwoName);
+        gameTimer = (TextView) findViewById(R.id.VolleyballGameTimer);
 
 
         matchNameView.setText(volleyballGame.getMatchName());
@@ -58,7 +58,7 @@ public class VolleyballCounter extends AppCompatActivity {
         secondTeamNameView.setText(volleyballGame.getSecondTeamName());
 
         timerGameRun();
-        Button addOnePointToFirstTeam = (Button) findViewById(R.id.AddOnePointToFirstTeam);
+        final Button addOnePointToFirstTeam = (Button) findViewById(R.id.VolleyballAddOnePointToFirstTeam);
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter < LIMIT) {
@@ -68,7 +68,7 @@ public class VolleyballCounter extends AppCompatActivity {
             }
         });
 
-        Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.RemoveOnePointFromFirstTeam);
+        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.VolleyballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {
@@ -78,7 +78,7 @@ public class VolleyballCounter extends AppCompatActivity {
             }
         });
 
-        Button addOnePointToSecondTeam = (Button) findViewById(R.id.AddOnePointToSecondTeam);
+        final Button addOnePointToSecondTeam = (Button) findViewById(R.id.VolleyballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter < LIMIT) {
@@ -88,7 +88,7 @@ public class VolleyballCounter extends AppCompatActivity {
             }
         });
 
-        Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.RemoveOnePointFromSecondTeam);
+        final Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.VolleyballRemoveOnePointFromSecondTeam);
         removeOnePointFromSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter > MIN) {
@@ -98,22 +98,35 @@ public class VolleyballCounter extends AppCompatActivity {
             }
         });
 
-        Button pauseGame = (Button) findViewById(R.id.PauseGame);
-        pauseGame.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                running = !running;
-            }
-        });
-
-        Button endGame = (Button) findViewById(R.id.EndMatch);
+        final Button endGame = (Button) findViewById(R.id.VolleyballEndMatch);
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 running = false;
                 saveGame();
             }
         });
-
-
+        final Button pauseGame = (Button) findViewById(R.id.VolleyballPauseGame);
+        pauseGame.setOnClickListener(new View.OnClickListener() {
+                                         public void onClick(View view) {
+                                             running = !running;
+                                             if (running) {
+                                                 pauseGame.setText("Пауза");
+                                                 addOnePointToFirstTeam.setEnabled(true);
+                                                 addOnePointToSecondTeam.setEnabled(true);
+                                                 removeOnePointFromFirstTeam.setEnabled(true);
+                                                 removeOnePointFromSecondTeam.setEnabled(true);
+                                                 endGame.setEnabled(true);
+                                             } else {
+                                                 pauseGame.setText("Продолжить");
+                                                 addOnePointToFirstTeam.setEnabled(false);
+                                                 addOnePointToSecondTeam.setEnabled(false);
+                                                 removeOnePointFromFirstTeam.setEnabled(false);
+                                                 removeOnePointFromSecondTeam.setEnabled(false);
+                                                 endGame.setEnabled(false);
+                                             }
+                                         }
+                                     }
+        );
     }
 
     private void timerGameRun() {
