@@ -52,6 +52,15 @@
     </item>
     </style>
 
+    <style name="volleyball_counter_team">
+        <item name="android:textSize">
+            16sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+
 
     <style name="ResultTEXT">
         <item name="android:textSize">
