@@ -27,8 +27,8 @@ public class FootballCounter extends AppCompatActivity {
     private TextView gameTimer;
     private int firstTeamCounter;
     private int secondTeamCounter;
-    private int LIMIT;
-    private int MIN;
+    // private int LIMIT;
+     private final int MIN = 0;
     private String time;
     private int seconds;
     private boolean running;
@@ -42,8 +42,6 @@ public class FootballCounter extends AppCompatActivity {
 
         firstTeamCounter = 0;
         secondTeamCounter = 0;
-        LIMIT = 25;
-        MIN = 0;
         running = true;
 
         counterFirstTeam = (TextView) findViewById(R.id.FootballFirstTeamCounter);
@@ -62,10 +60,8 @@ public class FootballCounter extends AppCompatActivity {
         final Button addOnePointToFirstTeam = (Button) findViewById(R.id.FootballAddOnePointToFirstTeam);
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (firstTeamCounter < LIMIT) {
-                    firstTeamCounter++;
-                    counterFirstTeam.setText(String.valueOf(firstTeamCounter));
-                }
+                firstTeamCounter++;
+                counterFirstTeam.setText(String.valueOf(firstTeamCounter));
             }
         });
 
@@ -82,10 +78,8 @@ public class FootballCounter extends AppCompatActivity {
         final Button addOnePointToSecondTeam = (Button) findViewById(R.id.FootballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (secondTeamCounter < LIMIT) {
-                    secondTeamCounter++;
-                    counterSecondTeam.setText(String.valueOf(secondTeamCounter));
-                }
+                secondTeamCounter++;
+                counterSecondTeam.setText(String.valueOf(secondTeamCounter));
             }
         });
 
@@ -104,29 +98,29 @@ public class FootballCounter extends AppCompatActivity {
             public void onClick(View view) {
                 running = false;
                 saveGame();
-            }
-        });
+    }
+});
 
-        final Button pauseGame = (Button) findViewById(R.id.FootballPauseGame);
+final Button pauseGame = (Button) findViewById(R.id.FootballPauseGame);
         pauseGame.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                running = !running;
-                if (running) {
-                    pauseGame.setText("Пауза");
-                    addOnePointToFirstTeam.setEnabled(true);
-                    addOnePointToSecondTeam.setEnabled(true);
-                    removeOnePointFromFirstTeam.setEnabled(true);
-                    removeOnePointFromSecondTeam.setEnabled(true);
-                    endGame.setEnabled(true);
-                } else {
-                    pauseGame.setText("Продолжить");
-                    addOnePointToFirstTeam.setEnabled(false);
-                    addOnePointToSecondTeam.setEnabled(false);
-                    removeOnePointFromFirstTeam.setEnabled(false);
-                    removeOnePointFromSecondTeam.setEnabled(false);
-                    endGame.setEnabled(false);
-                }
-            }
+public void onClick(View view) {
+        running = !running;
+        if (running) {
+        pauseGame.setText("Пауза");
+        addOnePointToFirstTeam.setEnabled(true);
+        addOnePointToSecondTeam.setEnabled(true);
+        removeOnePointFromFirstTeam.setEnabled(true);
+        removeOnePointFromSecondTeam.setEnabled(true);
+        endGame.setEnabled(true);
+        } else {
+        pauseGame.setText("Продолжить");
+        addOnePointToFirstTeam.setEnabled(false);
+        addOnePointToSecondTeam.setEnabled(false);
+        removeOnePointFromFirstTeam.setEnabled(false);
+        removeOnePointFromSecondTeam.setEnabled(false);
+        endGame.setEnabled(false);
+        }
+        }
         });
     }
 
@@ -152,7 +146,7 @@ public class FootballCounter extends AppCompatActivity {
     private void saveGame() {
         FootballCounter.footballGame.setFirstTeamCount(firstTeamCounter);
         FootballCounter.footballGame.setSecondTeamCount(secondTeamCounter);
-        FootballCounter.footballGame.setGameType(2);//Для футболла тип 1
+        FootballCounter.footballGame.setGameType(2);//Для футболла тип 2
         FootballCounter.footballGame.setGameTime(time);
 
         // Текущее время
