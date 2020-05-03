@@ -7,10 +7,163 @@
     tools:context=".game_counter.BasketballCounter">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/BasketballMatchName"
+        android:layout_width="181dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FirstBasketballTeamName"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SecondBasketballTeamName"
+        android:layout_width="62dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BasketballFirstTeamCounter"
+        android:layout_width="62dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="164dp"
+        android:text="0"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BasketballSecondTeamCounter"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="60dp"
+        android:text="0"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BasketballGameTimer"
+        android:layout_width="144dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="132dp"
+        android:text="00:00:00"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballPauseGame"
+        android:layout_width="139dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="108dp"
+        android:text="Пауза"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballEndMatch"
+        android:layout_width="137dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="108dp"
+        android:text="Закончить матч"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddThreePointToFirstTeam"
+        android:layout_width="82dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="444dp"
+        android:text="+3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddTwoPointToFirstTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ТУТ БУДЕТ СЧЁТЧИК БАСКЕТБОЛЛ"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="87dp" />
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="384dp"
+        android:text="+2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddOnePointToFirstTeam"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="316dp"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballRemoveOnePointFromFirstTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="248dp"
+        android:text="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddThreePointToSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="440dp"
+        android:text="+3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddTwoPointToSecondTeam"
+        android:layout_width="87dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="384dp"
+        android:text="+2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballAddOnePointToSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="316dp"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BasketballRemoveOnePointFromSecondTeam"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="248dp"
+        android:text="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
