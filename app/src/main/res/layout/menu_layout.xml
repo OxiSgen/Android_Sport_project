@@ -6,46 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Menu">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/VRbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:background="@drawable/volleyball_button1" />
-
-            <Button
-                android:id="@+id/BRbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/football_button" />
-
-            <Button
-                android:id="@+id/FRbutton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/basketball_button" />
-
-            <Button
-                android:id="@+id/FRbutton1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/basketball_button" />
-        </LinearLayout>
-    </ScrollView>
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -78,6 +38,47 @@
             android:layout_toStartOf="@+id/imageView2"
             android:text="@string/shapka"
             android:textAppearance="@style/shapka" />
+
+        <ScrollView
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/VRbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/volleyball_button" />
+
+                <Button
+                    android:id="@+id/FRbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/football_button" />
+
+                <Button
+                    android:id="@+id/BRbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/basketball_button" />
+
+                <Button
+                    android:id="@+id/BRbutton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/basketball_button" />
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
