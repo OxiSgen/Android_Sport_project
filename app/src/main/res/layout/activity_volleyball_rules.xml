@@ -144,6 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/vb_rule2"
+                        android:textAlignment="viewStart"
                         android:textAppearance="@style/Text_low_Screen3" />
                 </LinearLayout>
 
