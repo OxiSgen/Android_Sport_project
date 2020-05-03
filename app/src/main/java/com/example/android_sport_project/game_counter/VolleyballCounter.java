@@ -27,8 +27,8 @@ public class VolleyballCounter extends AppCompatActivity {
     private TextView gameTimer;
     private int firstTeamCounter;
     private int secondTeamCounter;
-    private int LIMIT;
-    private int MIN;
+    private final int LIMIT=25;
+    private final int MIN=0;
     private String time;
     private int seconds;
     private boolean running;
@@ -41,8 +41,6 @@ public class VolleyballCounter extends AppCompatActivity {
         setContentView(R.layout.activity_volleyball_counter);
         firstTeamCounter = 0;
         secondTeamCounter = 0;
-        LIMIT = 25;
-        MIN = 0;
         running = true;
 
         counterFirstTeam = (TextView) findViewById(R.id.FirstVolleyballTeamCounter);
