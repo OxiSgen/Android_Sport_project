@@ -23,4 +23,5 @@
     <string name="vb_players">по 12 игроков</string>
     <string name="vb_rule4">Победитель матча - это та команда, которая выигрывает три партии. В случае равного счета 2-2, решающая (пятая) партия играется до 15 очков с минимальным преимуществом в 2 очка.</string>
     <string name="resultMatch">Результаты Матчей</string>
+    <string name="VolleyballTeamOneName">Команда №1</string>
 </resources>
