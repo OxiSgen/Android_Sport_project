@@ -2,7 +2,7 @@
 <resources>
     <style name="Text_low_Screen3">
         <item name="android:textSize">
-            25sp
+            35sp
         </item>
         <item name="android:textColor">
             #DCC275
@@ -11,7 +11,7 @@
 
     <style name="Text_high_Screen3">
         <item name="android:textSize">
-            40sp
+            50sp
         </item>
         <item name="android:textColor">
             #F6E4BD

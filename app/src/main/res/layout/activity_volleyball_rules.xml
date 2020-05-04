@@ -61,8 +61,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alwaysDrawnWithCache="false"
-            android:background="@drawable/bg3_n"
-            android:orientation="vertical">
+            android:background="@drawable/vb_bg3_gradient"
+            android:orientation="vertical"
+            android:alpha="">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/vb_bg_screen3">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/bg3_gradient"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="1dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/VbStarter"
@@ -70,7 +86,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="100dp"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="-30dp"
                 android:background="@drawable/rectangle_1"
                 android:text="@string/next_window"
                 android:textAppearance="@style/Button_Game" />
