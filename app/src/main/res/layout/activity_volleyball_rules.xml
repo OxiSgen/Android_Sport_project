@@ -60,30 +60,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_screen3"
+            android:alwaysDrawnWithCache="false"
+            android:background="@drawable/bg3_n"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Button
+                android:id="@+id/VbStarter"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/vb_bg_screen3"
-                android:alpha="">
-
-                <Button
-                    android:id="@+id/VbStarter"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginEnd="100dp"
-                    android:background="@drawable/rectangle_1"
-                    android:text="@string/next_window"
-                    android:textAppearance="@style/Button_Game"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.94" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginTop="250dp"
+                android:background="@drawable/rectangle_1"
+                android:text="@string/next_window"
+                android:textAppearance="@style/Button_Game" />
 
             <Button
                 android:id="@+id/Vb_scroll"
@@ -107,7 +97,8 @@
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="10dp"
                 android:orientation="horizontal"
-                android:showDividers="beginning|middle">
+                android:showDividers="beginning|middle"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -166,7 +157,8 @@
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="5dp"
                 android:orientation="horizontal"
-                android:showDividers="beginning|middle">
+                android:showDividers="beginning|middle"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
