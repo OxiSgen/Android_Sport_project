@@ -191,8 +191,7 @@ public class BasketballCounter extends AppCompatActivity {
 
         // Текущее время
         Date currentDate = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-        basketballGame.setGameDate(dateFormat.format(currentDate));
+        basketballGame.setGameDate(currentDate);
 
         boolean result = JsonHelper.addToJsonFile(basketballGame, this);
         if (result) {

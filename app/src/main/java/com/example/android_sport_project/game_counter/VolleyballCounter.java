@@ -154,8 +154,7 @@ public class VolleyballCounter extends AppCompatActivity {
 
         // Текущее время
         Date currentDate = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-        volleyballGame.setGameDate(dateFormat.format(currentDate));
+        volleyballGame.setGameDate(currentDate);
 
         boolean result = JsonHelper.addToJsonFile(volleyballGame, this);
         if (result) {

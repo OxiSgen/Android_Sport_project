@@ -13,9 +13,6 @@ public class JsonHelper {
     private static Gson gson = new Gson();
 
     public static boolean addToJsonFile(SportGame sportGame, Context context) {
-
-        //DataItem dataItem = gson.fromJson(DataHelperSave.read(context),DataItem.class);
-
         try {
             DataItem dataItem = fromJsonFile(context);
             if (dataItem == null) {
@@ -24,8 +21,6 @@ public class JsonHelper {
             } else {
                 dataItem.getSportGames().add(sportGame);
             }
-
-
             String jsonResult = gson.toJson(dataItem);
             DataHelperSave.create(context, jsonResult);
             return true;
@@ -37,19 +32,29 @@ public class JsonHelper {
 
     public static DataItem fromJsonFile(Context context) {
         String jsonStringFromFile = DataHelperSave.read(context);
-        DataItem dataItem = gson.fromJson(DataHelperSave.read(context), DataItem.class);
-
+        DataItem dataItem = new DataItem();
+        if (jsonStringFromFile != null) {
+            dataItem = gson.fromJson(DataHelperSave.read(context), DataItem.class);
+        }
         return dataItem;
     }
 
     public static class DataItem {
         List<SportGame> sportGames;
+
         public DataItem() {
             this.sportGames = new ArrayList<>();
         }
+
         public List<SportGame> getSportGames() {
-            return sportGames;
+            if (sportGames != null) {
+                return sportGames;
+            } else {
+                return new ArrayList<>();
+            }
+
         }
+
         public void setSportGames(List<SportGame> sportGames) {
             this.sportGames = sportGames;
         }

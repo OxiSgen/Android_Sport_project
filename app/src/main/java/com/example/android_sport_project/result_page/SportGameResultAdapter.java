@@ -1,4 +1,4 @@
-package com.example.android_sport_project;
+package com.example.android_sport_project.result_page;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,19 +9,25 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android_sport_project.R;
+import com.example.android_sport_project.model.SportGame;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHolder> {
+public class SportGameResultAdapter extends RecyclerView.Adapter<SportGameResultAdapter.ScoreViewHolder> {
 
-    private List<Score> scores = new ArrayList<>();
+    private List<SportGame> sportGames = new ArrayList<>();
 
-    public List<Score> getScores() {
-        return scores;
+    public List<SportGame> getSportGames() {
+        return sportGames;
     }
 
-    public void addScore(Score score) {
-        scores.add(score);
+    public void addScore(SportGame sportGame) {
+        sportGames.add(sportGame);
         notifyDataSetChanged();
     }
 
@@ -35,7 +41,7 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
 
     @Override
     public void onBindViewHolder(@NonNull ScoreViewHolder holder, int position) {
-        switch (scores.get(position).getType()) {
+        switch (sportGames.get(position).getGameType()) {
             case 1:
                 holder.imageView.setImageResource(R.drawable.volley_ball);
                 break;
@@ -49,16 +55,18 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
                 holder.imageView.setImageResource(R.drawable.ic_crop_original_blue_24dp);
                 break;
         }
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
+        String GameDate = dateFormat.format(sportGames.get(position).getGameDate());
 
-        holder.txtFirstTeam.setText(scores.get(position).getFirstTeam());
-        holder.txtScore.setText(scores.get(position).getScore());
-        holder.txtSecondTeam.setText(scores.get(position).getSecondTeam());
-        holder.txtDate.setText(scores.get(position).getDate());
+        holder.txtFirstTeam.setText(sportGames.get(position).getFirstTeamName());
+        holder.txtScore.setText(sportGames.get(position).getFirstTeamCount() +":" + sportGames.get(position).getSecondTeamCount());
+        holder.txtSecondTeam.setText(sportGames.get(position).getSecondTeamName());
+        holder.txtDate.setText(GameDate);
     }
 
     @Override
     public int getItemCount() {
-        return scores.size();
+        return sportGames.size();
     }
 
     class ScoreViewHolder extends RecyclerView.ViewHolder {
@@ -68,7 +76,7 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHol
         private TextView txtSecondTeam;
         private TextView txtDate;
 
-        public ScoreViewHolder(@NonNull View itemView) {
+        public ScoreViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             txtFirstTeam = itemView.findViewById(R.id.txtFirstTeam);

@@ -1,6 +1,7 @@
 package com.example.android_sport_project.model;
 
-import androidx.annotation.NonNull;
+
+import java.util.Date;
 
 public class SportGame {
     private String firstTeamName;
@@ -10,7 +11,7 @@ public class SportGame {
     private int firstTeamCount;
     private int secondTeamCount;
     private String gameTime;
-    private String gameDate;
+    private Date gameDate;
 
     public String getFirstTeamName() {
         return firstTeamName;
@@ -68,25 +69,11 @@ public class SportGame {
         this.gameTime = gameTime;
     }
 
-    public String getGameDate() {
+    public Date getGameDate() {
         return gameDate;
     }
 
-    public void setGameDate(String gameDate) {
+    public void setGameDate(Date gameDate) {
         this.gameDate = gameDate;
-    }
-
-    @Override
-    public String toString() {
-        return "SportGame{" +
-                "firstTeamName='" + firstTeamName + '\'' +
-                ", secondTeamName='" + secondTeamName + '\'' +
-                ", matchName='" + matchName + '\'' +
-                ", gameType=" + gameType +
-                ", firstTeamCount=" + firstTeamCount +
-                ", secondTeamCount=" + secondTeamCount +
-                ", gameTime='" + gameTime + '\'' +
-                ", gameDate='" + gameDate + '\'' +
-                '}';
     }
 }

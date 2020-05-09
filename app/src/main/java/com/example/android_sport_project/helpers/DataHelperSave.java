@@ -34,9 +34,9 @@ public class DataHelperSave {
         }
     }
 
-    public static boolean create(Context context, String jsonString){
+    public static boolean create(Context context, String jsonString) {
         try {
-            FileOutputStream fos = context.openFileOutput(FILE_NAME,Context.MODE_PRIVATE);
+            FileOutputStream fos = context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             if (jsonString != null) {
                 fos.write(jsonString.getBytes());
             }
@@ -49,9 +49,9 @@ public class DataHelperSave {
         }
     }
 
-    public static boolean isFilePresent(Context context) {
+  /*  private static boolean isFilePresent(Context context) {
         String path = context.getFilesDir().getAbsolutePath() + "/" + FILE_NAME;
         File file = new File(path);
         return file.exists();
-    }
+    } */
 }
