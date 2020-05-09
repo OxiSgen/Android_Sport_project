@@ -23,4 +23,9 @@
     <string name="vb_players">по 12 игроков</string>
     <string name="vb_rule4">Победитель матча - это та команда, которая выигрывает три партии. В случае равного счета 2-2, решающая (пятая) партия играется до 15 очков с минимальным преимуществом в 2 очка.</string>
     <string name="resultMatch">Результаты Матчей</string>
+    <string name="team_two_title">team_two</string>
+    <string name="date_title">data</string>
+    <string name="score_title">score_ttl</string>
+    <string name="team_one_title">team_one</string>
+    <string name="match_title">Match</string>
 </resources>

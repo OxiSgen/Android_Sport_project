@@ -28,68 +28,118 @@
 
     // реализовать адаптивный дизайн
 
-    <TableRow
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:gravity="center">
+        tools:context=".MainActivity"
+        android:background="#f29496">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_weight="14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtMatchTitle"
+                android:layout_width="35dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Матч"
-                android:textSize="15dp" />
+                android:layout_weight="1"
+                android:text="@string/match_title"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_devider" />
 
             <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtFirstTeam"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Команда 1"
-                android:textSize="15dp" />
+                android:layout_weight="4"
+                android:text="@string/team_one_title"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_devider" />
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtScore"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Счёт"
-                android:textSize="15dp" />
+                android:layout_weight="2"
+                android:text="@string/score_title"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_devider" />
 
             <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtSecondTeam"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Команда 2"
-                android:textSize="15dp" />
+                android:layout_weight="4"
+                android:text="@string/team_two_title"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_devider" />
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtDate"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="Дата"
-                android:textSize="15dp" />
+                android:layout_weight="3"
+                android:text="@string/date_title"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
         </LinearLayout>
-    </TableRow>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/custom_devider"
+            android:foregroundGravity="fill_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMain"
+            android:layout_marginTop="1dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
 
 
-    <TextView
-        android:id="@+id/ResultView"
-        android:layout_width="411dp"
-        android:layout_height="497dp"
-        android:layout_marginEnd="10dp"
-        android:text=""
-        android:textSize="15dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </TableLayout>
