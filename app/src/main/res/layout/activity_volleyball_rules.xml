@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,21 +45,38 @@
 
     <ScrollView
         android:id="@+id/scroll"
+        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg3_n"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/gradient_bg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="-1dp">
+
+                <ImageView
+                    android:id="@+id/voleubollmiach"
+                    android:elevation="-10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg3"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/VbStarter"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="100dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="100dp"
                 android:background="@drawable/rectangle_1"
                 android:text="@string/next_window"
@@ -196,4 +213,7 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+
+
+
+</RelativeLayout>

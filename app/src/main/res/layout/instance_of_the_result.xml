@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp">
+
+    <LinearLayout
+        android:id="@+id/layoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_weight="14"
+        android:background="#f29496">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:paddingTop="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp"
+            app:srcCompat="@drawable/ic_crop_original_blue_24dp" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_devider" />
+
+        <TextView
+            android:id="@+id/txtFirstTeam"
+            android:layout_width="70dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/team_one_title"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_devider" />
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:text="@string/score_title"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_devider" />
+
+        <TextView
+            android:id="@+id/txtSecondTeam"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            android:text="@string/team_two_title"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_devider" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:text="@string/date_title"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

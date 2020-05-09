@@ -4,17 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 
-import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
+import com.example.android_sport_project.result_page.Results;
 import com.example.android_sport_project.rules.BasketballRules;
 import com.example.android_sport_project.rules.FootballRules;
 import com.example.android_sport_project.rules.VolleyballRules;
