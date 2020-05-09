@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/layoutItem"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="35dp"
         android:orientation="horizontal"
         app:layout_constraintHorizontal_weight="14"
         android:background="#f29496">
@@ -22,6 +22,8 @@
             android:adjustViewBounds="true"
             android:cropToPadding="false"
             android:paddingTop="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:paddingBottom="2dp"
             app:srcCompat="@drawable/ic_crop_original_blue_24dp" />
 
@@ -34,6 +36,7 @@
         <TextView
             android:id="@+id/txtFirstTeam"
             android:layout_width="70dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="@string/team_one_title"
@@ -48,9 +51,10 @@
 
         <TextView
             android:id="@+id/txtScore"
-            android:layout_width="40dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:layout_gravity="center"
             android:text="@string/score_title"
             android:textAlignment="center"
             android:textSize="14sp" />
@@ -66,6 +70,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
+            android:layout_gravity="center"
             android:text="@string/team_two_title"
             android:textAlignment="center"
             android:textSize="14sp" />
@@ -80,7 +85,8 @@
             android:id="@+id/txtDate"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="6"
+            android:layout_gravity="center"
             android:text="@string/date_title"
             android:textAlignment="center"
             android:textSize="14sp" />

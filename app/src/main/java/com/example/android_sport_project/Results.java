@@ -55,11 +55,14 @@ public class Results extends AppCompatActivity {
         Gson gson = new Gson();
         JsonHelper.DataItem dataItem = gson.fromJson(DataHelperSave.read(this), JsonHelper.DataItem.class);
         List<SportGame> sportGames = dataItem.getSportGames();
-        for(int i = 0; i < sportGames.size(); i++) {
-            String Score = (sportGames.get(i).getFirstTeamCount()) + ":" + (sportGames.get(i).getSecondTeamCount());
-            adapter.addScore(new Score(sportGames.get(i).getGameType(), sportGames.get(i).getFirstTeamName(), Score , sportGames.get(i).getSecondTeamName(), sportGames.get(i).getGameDate()));
+            for (int i = 0; i < sportGames.size(); i++) {
+                String Score = (sportGames.get(i).getFirstTeamCount()) + ":" + (sportGames.get(i).getSecondTeamCount());
+                adapter.addScore(new Score(sportGames.get(i).getGameType(), sportGames.get(i).getFirstTeamName(), Score, sportGames.get(i).getSecondTeamName(), sportGames.get(i).getGameDate()));
+            }
+        for (int i = 0; i < 15; i++) {
+            adapter.addScore(new Score((int)' ', " ", " ", " ", " "));
+        }
         }
 
     }
-}
 
