@@ -31,4 +31,9 @@
     <string name="fb_rule3">За соблюдением правил следят арбитры: один на поле, двое стоят у боковых линий и дополнительный судья за линией ворот.</string>
     <string name="fb_time">по 45 минут</string>
     <string name="fb_rule4">Фол -действие, которое противоречит правилам игры. При нарушении правил назначается пенальти (11 м) или свободный удар.</string>
+    <string name="team_two_title">Команда 2</string>
+    <string name="date_title">Дата</string>
+    <string name="score_title">Счёт</string>
+    <string name="team_one_title">Команда 1</string>
+    <string name="match_title">Матч</string>
 </resources>
