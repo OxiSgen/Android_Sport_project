@@ -52,7 +52,7 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize"
         >
 
@@ -66,8 +66,8 @@
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_width="432dp"
+                android:layout_height="297dp"
                 android:background="@drawable/bg_football_rules">
 
                 <ImageView
@@ -76,8 +76,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/fb_bg3_image_gradient"
                     tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="1dp"
-                    />
+                    tools:layout_editor_absoluteY="1dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
@@ -169,6 +168,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
 
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="5dp"

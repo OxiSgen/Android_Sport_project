@@ -76,8 +76,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/bb_bg3_image_gradient"
                     tools:layout_editor_absoluteX="6dp"
-                    tools:layout_editor_absoluteY="1dp"
-                    />
+                    tools:layout_editor_absoluteY="1dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
