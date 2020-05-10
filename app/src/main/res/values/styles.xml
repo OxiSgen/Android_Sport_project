@@ -53,4 +53,14 @@
     </style>
 
 
+    <style name="ResultTEXT">
+        <item name="android:textSize">
+            15sp
+        </item>
+        <item name="android:textColor">
+            #ED981E19
+        </item>
+    </style>
+
+
 </resources>

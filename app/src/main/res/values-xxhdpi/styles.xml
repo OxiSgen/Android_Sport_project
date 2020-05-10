@@ -19,11 +19,22 @@
     </style>
 
     <style name="Text_high_Screen3">
+    <item name="android:textSize">
+        20sp
+    </item>
+    <item name="android:textColor">
+        #F6E4BD
+    </item>
+</style>
+
+    <style name="ResultTEXT">
         <item name="android:textSize">
-            20sp
+            25sp
         </item>
         <item name="android:textColor">
-            #F6E4BD
+            #ED981E19
         </item>
     </style>
+
+
 </resources>

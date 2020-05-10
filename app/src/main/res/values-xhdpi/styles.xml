@@ -25,4 +25,15 @@
             #F6E4BD
         </item>
     </style>
+
+    <style name="ResultTEXT">
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:textColor">
+            #ED981E19
+        </item>
+    </style>
+
+
 </resources>
