@@ -1,83 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".rules.VolleyballRules">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/shapka_gradient">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/shapka_gradient">
+            android:layout_height="match_parent"
+            >
 
-        </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="69dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="69dp"
-            android:layout_height="38dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="13dp"
-            app:srcCompat="@drawable/logo" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/shapka"
+                android:textAppearance="@style/shapka"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toStartOf="@+id/imageView2"
-            android:text="@string/shapka"
-            android:textAppearance="@style/shapka" />
-
-    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:id="@+id/scroll"
-        android:layout_marginTop="55dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:alwaysDrawnWithCache="false"
+            android:background="@drawable/bg3_gradient"
             android:orientation="vertical"
-            android:background="@drawable/gradient_bg">
-
+            >
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="-16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="-1dp">
+                android:layout_height="280dp"
+                android:scaleType="fitCenter">
 
                 <ImageView
-                    android:id="@+id/voleubollmiach"
-                    android:elevation="-10dp"
+                    android:id="@+id/imageView4"
+                    android:elevation="-1dp"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg3"
-                    tools:ignore="MissingConstraints" />
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/vb_bg3_image_gradient"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="1dp"
+                    />
 
+                <ImageView
+                    android:layout_width="501dp"
+                    android:layout_height="298dp"
+                    android:background="@drawable/vb_image_screen3"
+                    android:elevation="-2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/VbStarter"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginTop="-15dp"
                 android:background="@drawable/rectangle_1"
                 android:text="@string/next_window"
                 android:textAppearance="@style/Button_Game" />
@@ -89,22 +105,23 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="100dp"
+                android:alpha="0.7"
                 android:background="@drawable/rectangle_1"
                 android:text="@string/rules"
                 android:textAppearance="@style/Button_Game"
-                android:alpha="0.7"
                 app:layout_constraintVertical_bias="1.0" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="10dp"
+                android:orientation="horizontal"
                 android:showDividers="beginning|middle"
-                android:orientation="horizontal">
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -163,7 +180,8 @@
                 android:divider="@drawable/lines_screen3"
                 android:dividerPadding="5dp"
                 android:orientation="horizontal"
-                android:showDividers="beginning|middle">
+                android:showDividers="beginning|middle"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -212,8 +230,17 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="-1dp">
 
+        <ImageView
+            android:id="@+id/black_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/black_rectangle"
+            tools:ignore="MissingConstraints" />
 
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

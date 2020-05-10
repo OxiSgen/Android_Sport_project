@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text_low_Screen3">
+        <item name="android:textSize">
+            17sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+
+    <style name="Text_high_Screen3">
+        <item name="android:textSize">
+            24sp
+        </item>
+        <item name="android:textColor">
+            #F6E4BD
+        </item>
+    </style>
+</resources>
