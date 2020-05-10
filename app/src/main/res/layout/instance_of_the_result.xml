@@ -12,7 +12,7 @@
         android:layout_height="35dp"
         android:orientation="horizontal"
         app:layout_constraintHorizontal_weight="14"
-        android:background="#f29496">
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/imageView"
