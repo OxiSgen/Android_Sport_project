@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alwaysDrawnWithCache="false"
-            android:background="@drawable/vb_bg3_gradient"
+            android:background="@drawable/bg3_gradient"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -74,7 +74,7 @@
                     android:id="@+id/imageView4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/vb_bg3_image_gradient"
+                    app:srcCompat="@drawable/bg3_image_gradient"
                     tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="1dp"
                     />
