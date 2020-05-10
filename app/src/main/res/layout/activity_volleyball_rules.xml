@@ -60,18 +60,31 @@
             android:orientation="vertical"
             >
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginTop="-20dp"
+                android:layout_marginTop="-16dp"
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
-                android:background="@drawable/vb_image_screen3">
+                android:scaleType="fitCenter">
 
                 <ImageView
                     android:id="@+id/imageView4"
+                    android:elevation="-1dp"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/vb_bg3_image_gradient"                    tools:layout_editor_absoluteX="6dp"
+                    app:srcCompat="@drawable/vb_bg3_image_gradient"
+                    tools:layout_editor_absoluteX="6dp"
                     tools:layout_editor_absoluteY="1dp"
                     />
+
+                <ImageView
+                    android:layout_width="501dp"
+                    android:layout_height="298dp"
+                    android:background="@drawable/vb_image_screen3"
+                    android:elevation="-2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
@@ -80,7 +93,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="100dp"
-                android:layout_marginTop="-35dp"
+                android:layout_marginTop="-15dp"
                 android:background="@drawable/rectangle_1"
                 android:text="@string/next_window"
                 android:textAppearance="@style/Button_Game" />
