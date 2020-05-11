@@ -21,16 +21,16 @@ public class BasketballStarter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basketball_starter);
-        // startMatchName = (EditText) findViewById(R.id.BasketballMatchNameStart);
-        //  startFirstTeamName = (EditText) findViewById(R.id.BasketballFirstTeamStart);
-        //   startSecondTeamName = (EditText) findViewById(R.id.BasketballSecondTeamStart);
+         startMatchName = (EditText) findViewById(R.id.BasketballMatchNameStart);
+         startFirstTeamName = (EditText) findViewById(R.id.BasketballFirstTeamStart);
+         startSecondTeamName = (EditText) findViewById(R.id.BasketballSecondTeamStart);
 
         Button bBCounter = (Button) findViewById(R.id.BbCounter);
         bBCounter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                //   BasketballCounter.basketballGame.setFirstTeamName( String.valueOf(startFirstTeamName.getText()));
-                //   BasketballCounter.basketballGame.setSecondTeamName(String.valueOf(startSecondTeamName.getText()));
-                //    BasketballCounter.basketballGame.setMatchName(String.valueOf(startMatchName.getText()));
+                BasketballCounter.basketballGame.setFirstTeamName( String.valueOf(startFirstTeamName.getText()));
+                BasketballCounter.basketballGame.setSecondTeamName(String.valueOf(startSecondTeamName.getText()));
+                BasketballCounter.basketballGame.setMatchName(String.valueOf(startMatchName.getText()));
 
                 Intent myIntent = new Intent(view.getContext(), BasketballCounter.class);
                 startActivityForResult(myIntent, 0);

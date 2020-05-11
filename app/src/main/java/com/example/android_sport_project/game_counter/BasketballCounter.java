@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android_sport_project.R;
+import com.example.android_sport_project.dialog.EndGameDialog;
 import com.example.android_sport_project.helpers.JsonHelper;
 import com.example.android_sport_project.model.SportGame;
 
@@ -51,9 +52,9 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
         secondTeamNameView = (TextView) findViewById(R.id.SecondBasketballTeamName);
         gameTimer = (TextView) findViewById(R.id.BasketballGameTimer);
 
-        //       matchNameView.setText(basketballGame.getMatchName());
-        //       firstTeamNameView.setText(basketballGame.getFirstTeamName());
-        //        secondTeamNameView.setText(basketballGame.getSecondTeamName());
+               matchNameView.setText(basketballGame.getMatchName());
+               firstTeamNameView.setText(basketballGame.getFirstTeamName());
+                secondTeamNameView.setText(basketballGame.getSecondTeamName());
 
         timerGameRun();
 
@@ -129,7 +130,9 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 running = false;
-                saveGame();
+                EndGameDialog dialog = new EndGameDialog(BasketballCounter.this, view.getContext());
+                dialog.show(getSupportFragmentManager(), "custom");
+                dialog.setCancelable(false);
             }
         });
 

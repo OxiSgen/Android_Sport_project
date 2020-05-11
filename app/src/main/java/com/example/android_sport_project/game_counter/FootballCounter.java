@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android_sport_project.R;
+import com.example.android_sport_project.dialog.EndGameDialog;
 import com.example.android_sport_project.helpers.JsonHelper;
 import com.example.android_sport_project.model.SportGame;
 
@@ -52,9 +53,9 @@ public class FootballCounter extends AppCompatActivity implements Counter{
         gameTimer = (TextView) findViewById(R.id.FootballGameTimer);
 
 
-        //       matchNameView.setText(footballGame.getMatchName());
-        //       firstTeamNameView.setText(footballGame.getFirstTeamName());
-        //        secondTeamNameView.setText(footballGame.getSecondTeamName());
+               matchNameView.setText(footballGame.getMatchName());
+               firstTeamNameView.setText(footballGame.getFirstTeamName());
+               secondTeamNameView.setText(footballGame.getSecondTeamName());
 
         timerGameRun();
         final Button addOnePointToFirstTeam = (Button) findViewById(R.id.FootballAddOnePointToFirstTeam);
@@ -97,7 +98,9 @@ public class FootballCounter extends AppCompatActivity implements Counter{
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 running = false;
-                saveGame();
+                EndGameDialog dialog = new EndGameDialog(FootballCounter.this, view.getContext());
+                dialog.show(getSupportFragmentManager(), "custom");
+                dialog.setCancelable(false);
             }
         });
 
