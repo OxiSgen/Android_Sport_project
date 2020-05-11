@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -136,12 +137,12 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button pauseGame = (Button) findViewById(R.id.BasketballPauseGame);
+        final ImageButton pauseGame = (ImageButton) findViewById(R.id.BasketballPauseGame);
         pauseGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 stopStartTime();
                 if (running) {
-                    pauseGame.setText("Пауза");
+                    pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
                     addOnePointToFirstTeam.setEnabled(true);
                     addTwoPointToFirstTeam.setEnabled(true);
                     addThreePointToFirstTeam.setEnabled(true);
@@ -152,7 +153,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     removeOnePointFromSecondTeam.setEnabled(true);
                     endGame.setEnabled(true);
                 } else {
-                    pauseGame.setText("Продолжить");
+                    pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
                     addOnePointToFirstTeam.setEnabled(false);
                     addTwoPointToFirstTeam.setEnabled(false);
                     addThreePointToFirstTeam.setEnabled(false);

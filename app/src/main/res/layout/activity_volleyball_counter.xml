@@ -123,13 +123,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/VolleyballPauseGame"
         android:layout_width="175dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="140dp"
-        android:text="Пауза"
+        android:src="@drawable/ic_stop_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

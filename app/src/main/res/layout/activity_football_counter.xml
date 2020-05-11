@@ -107,13 +107,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/FootballPauseGame"
         android:layout_width="152dp"
         android:layout_height="52dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="512dp"
-        android:text="Пауза"
+        android:src="@drawable/ic_stop_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
