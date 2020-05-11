@@ -29,7 +29,6 @@ public class EndGameDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         return builder.setTitle("Вы действительно хотите завершить игру ?")
-        .setView(R.layout.dialog_layout)
                 .setPositiveButton("Да",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,
