@@ -49,7 +49,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
         counterSecondTeam = (TextView) findViewById(R.id.FootballSecondTeamCounter);
         matchNameView = (TextView) findViewById(R.id.FootballMatchName);
         firstTeamNameView = (TextView) findViewById(R.id.FirstFootballTeamName);
-        secondTeamNameView = (TextView) findViewById(R.id.SecondVolleyballTeamCounter);
+        secondTeamNameView = (TextView) findViewById(R.id.SecondFootballTeamName);
         gameTimer = (TextView) findViewById(R.id.FootballGameTimer);
 
 
