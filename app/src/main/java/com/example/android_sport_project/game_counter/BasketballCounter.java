@@ -173,11 +173,10 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int hours = seconds / 3600;
-                int minutes = (seconds % 3600) / 60;
+                int minutes = (seconds) / 60;
                 int secon = seconds % 60;
 
-                time = String.format("%d:%02d:%02d", hours, minutes, secon);
+                time = String.format("%02d:%02d", minutes, secon);
                 gameTimer.setText(time);
                 if (running) {
                     seconds++;
