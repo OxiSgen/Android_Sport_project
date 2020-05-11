@@ -61,6 +61,14 @@
         </item>
     </style>
 
+    <style name="match_name">
+        <item name="android:textSize">
+            30sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
 
     <style name="ResultTEXT">
         <item name="android:textSize">
@@ -71,5 +79,44 @@
         </item>
     </style>
 
-
+    <style name="team_counter">
+        <item name="android:textSize">
+            80sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+    <style name="time_text">
+        <item name="android:textSize">
+            16sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+    <style name="timer">
+        <item name="android:textSize">
+            25sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+    <style name="game_count_text">
+        <item name="android:textSize">
+            8sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
+    <style name="game_count">
+        <item name="android:textSize">
+            50sp
+        </item>
+        <item name="android:textColor">
+            #DCC275
+        </item>
+    </style>
 </resources>
