@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class FootballCounter extends AppCompatActivity {
+public class FootballCounter extends AppCompatActivity implements Counter{
     private TextView counterFirstTeam;
     private TextView counterSecondTeam;
     private TextView matchNameView;
@@ -104,7 +104,7 @@ public class FootballCounter extends AppCompatActivity {
         final Button pauseGame = (Button) findViewById(R.id.FootballPauseGame);
         pauseGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                running = !running;
+                stopStartTime();
                 if (running) {
                     pauseGame.setText("Пауза");
                     addOnePointToFirstTeam.setEnabled(true);
@@ -142,8 +142,13 @@ public class FootballCounter extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void stopStartTime(){
+        running = !running;
+    }
 
-    private void saveGame() {
+    @Override
+    public void saveGame() {
         FootballCounter.footballGame.setFirstTeamCount(firstTeamCounter);
         FootballCounter.footballGame.setSecondTeamCount(secondTeamCounter);
         FootballCounter.footballGame.setGameType(2);//Для футболла тип 2
