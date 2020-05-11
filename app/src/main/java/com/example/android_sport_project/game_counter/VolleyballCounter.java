@@ -2,6 +2,8 @@ package com.example.android_sport_project.game_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,7 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android_sport_project.Menu;
 import com.example.android_sport_project.R;
+import com.example.android_sport_project.dialog.EndGameDialog;
+import com.example.android_sport_project.game_start.BasketballStarter;
 import com.example.android_sport_project.helpers.JsonHelper;
 import com.example.android_sport_project.model.SportGame;
 
@@ -18,7 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class VolleyballCounter extends AppCompatActivity {
+public class VolleyballCounter extends AppCompatActivity implements Counter {
     private TextView counterFirstTeam;
     private TextView counterSecondTeam;
     private TextView matchNameView;
@@ -27,8 +32,8 @@ public class VolleyballCounter extends AppCompatActivity {
     private TextView gameTimer;
     private int firstTeamCounter;
     private int secondTeamCounter;
-    private final int LIMIT=25;
-    private final int MIN=0;
+    private final int LIMIT = 25;
+    private final int MIN = 0;
     private String time;
     private int seconds;
     private boolean running;
@@ -100,13 +105,17 @@ public class VolleyballCounter extends AppCompatActivity {
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 running = false;
-                saveGame();
+               // saveGame();
+                EndGameDialog dialog = new EndGameDialog(VolleyballCounter.this, view.getContext());
+                dialog.show(getSupportFragmentManager(), "custom");
+                dialog.setCancelable(false);
             }
         });
+
         final Button pauseGame = (Button) findViewById(R.id.VolleyballPauseGame);
         pauseGame.setOnClickListener(new View.OnClickListener() {
                                          public void onClick(View view) {
-                                             running = !running;
+                                             stopStartTime();
                                              if (running) {
                                                  pauseGame.setText("Пауза");
                                                  addOnePointToFirstTeam.setEnabled(true);
@@ -146,7 +155,8 @@ public class VolleyballCounter extends AppCompatActivity {
         });
     }
 
-    private void saveGame() {
+    @Override
+    public void saveGame() {
         VolleyballCounter.volleyballGame.setFirstTeamCount(firstTeamCounter);
         VolleyballCounter.volleyballGame.setSecondTeamCount(secondTeamCounter);
         VolleyballCounter.volleyballGame.setGameType(1);//Для волейболла тип 1
@@ -162,6 +172,10 @@ public class VolleyballCounter extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Не удалось сохранить данные", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void stopStartTime(){
+        running = !running;
     }
 
 }
