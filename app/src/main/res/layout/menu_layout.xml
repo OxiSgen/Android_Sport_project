@@ -84,12 +84,6 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/basketball_button" />
 
-                <Button
-                    android:id="@+id/BRbutton1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/basketball_button" />
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
