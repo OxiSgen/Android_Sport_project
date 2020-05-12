@@ -10,63 +10,79 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="487dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="210dp"
         android:background="@drawable/tablovectr"
         android:saveEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13999999"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/VolleyballAddOnePointToFirstTeam"
-        android:layout_width="29dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="14dp"
         android:background="@drawable/points_up"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1285"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/FirstVolleyballTeamCounter"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vs_logo"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.482"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/VolleyballRemoveOnePointFromFirstTeam"
-        android:layout_width="29dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="14dp"
         android:background="@drawable/points_down"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1285"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/FirstVolleyballTeamCounter"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VolleyballAddOnePointToFirstTeam"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.667"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/VolleyballAddOnePointToSecondTeam"
-        android:layout_width="29dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="46dp"
         android:background="@drawable/points_up"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8715"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/SecondVolleyballTeamCounter"
         app:layout_constraintTop_toBottomOf="@+id/vs_logo"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.481"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/VolleyballRemoveOnePointFromSecondTeam"
-        android:layout_width="29dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="46dp"
         android:background="@drawable/points_down"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8715"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SecondVolleyballTeamCounter"
         app:layout_constraintTop_toBottomOf="@+id/VolleyballAddOnePointToFirstTeam"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.667"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -84,31 +100,36 @@
 
     <TextView
         android:id="@+id/FirstVolleyballTeamCounter"
-        android:layout_width="111dp"
+        android:layout_width="90dp"
         android:layout_height="122dp"
         android:layout_marginTop="25dp"
         android:text="00"
         android:textAlignment="center"
         android:textAppearance="@style/team_counter"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vs_logo"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.57"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/SecondVolleyballTeamCounter"
-        android:layout_width="111dp"
-        android:layout_height="122dp"
+        android:layout_width="98dp"
+        android:layout_height="120dp"
         android:layout_marginTop="25dp"
         android:text="00"
         android:textAlignment="center"
-
         android:textAppearance="@style/team_counter"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vs_logo"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.57"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -117,24 +138,26 @@
         android:layout_height="25dp"
         android:textAlignment="center"
         android:textAppearance="@style/volleyball_counter_team"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VolleyballMatchName"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.37" />
+
 
     <TextView
         android:id="@+id/VolleyballTeamTwoName"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginTop="116dp"
         android:textAlignment="center"
         android:textAppearance="@style/volleyball_counter_team"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VolleyballMatchName" />
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/VolleyballMatchName"
@@ -142,45 +165,51 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="@style/match_name"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06999999" />
-
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.039" />
 
     <TextView
         android:id="@+id/VolleyballGameTimer"
-        android:layout_width="103dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
         android:text="00 : 00"
-        android:textAlignment="center"
         android:textAppearance="@style/timer"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintVertical_bias="0.58" />
 
     <ImageButton
         android:id="@+id/VolleyballPauseGame"
-        android:layout_width="107dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="92dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="7dp"
         android:background="#00ABBCDC"
         android:src="@drawable/ic_stop_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VolleyballGameTimer" />
+        app:layout_constraintTop_toBottomOf="@+id/VolleyballGameTimer"
+        app:layout_constraintVertical_bias="0.7" />
 
     <ImageView
         android:id="@+id/vs_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/VolleyballTeamTwoName"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toEndOf="@+id/VolleyballTeamOneName"
-        app:layout_constraintTop_toBottomOf="@+id/VolleyballMatchName"
-        app:layout_constraintVertical_bias="0.188"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.368"
         app:srcCompat="@drawable/vs" />
 
     <TextView
@@ -191,9 +220,12 @@
         android:text="ВРЕМЯ"
         android:textAlignment="center"
         android:textAppearance="@style/time_text"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstVolleyballTeamCounter" />
+        app:layout_constraintTop_toBottomOf="@+id/FirstVolleyballTeamCounter"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.785" />
 
     <TextView
         android:id="@+id/game_count"
@@ -203,48 +235,59 @@
         android:text="Счёт по партиям"
         android:textAlignment="center"
         android:textAppearance="@style/game_count_text"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstVolleyballTeamCounter" />
+        app:layout_constraintTop_toBottomOf="@+id/FirstVolleyballTeamCounter"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.785" />
 
     <TextView
         android:id="@+id/game_count2"
         android:layout_width="42dp"
         android:layout_height="19dp"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="Счёт по партиям"
         android:textAlignment="center"
         android:textAppearance="@style/game_count_text"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SecondVolleyballTeamCounter" />
+        app:layout_constraintTop_toBottomOf="@+id/SecondVolleyballTeamCounter"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.785" />
 
     <TextView
         android:id="@+id/FirstVolleyballTeamGameCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="32dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom|center"
         android:text="0"
-        android:textAlignment="center"
         android:textAppearance="@style/game_count"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_count" />
+        app:layout_constraintTop_toBottomOf="@+id/game_count"
+        app:layout_constraintVertical_bias="0.74" />
 
     <TextView
         android:id="@+id/SecondVolleyballTeamGameCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="32dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom|center"
         android:text="0"
-        android:textAlignment="center"
         android:textAppearance="@style/game_count"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintHorizontal_bias="0.74"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_count2" />
+        app:layout_constraintTop_toBottomOf="@+id/game_count2"
+        app:layout_constraintVertical_bias="0.74" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
