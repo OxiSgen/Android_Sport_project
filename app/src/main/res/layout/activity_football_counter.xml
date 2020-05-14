@@ -33,6 +33,17 @@
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.039" />
 
+    <ImageView
+        android:id="@+id/vs_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/SecondFootballTeamName"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/FirstFootballTeamName"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.368"
+        app:srcCompat="@drawable/vs" />
     <TextView
         android:id="@+id/FirstFootballTeamName"
         android:layout_width="100dp"
@@ -72,10 +83,11 @@
         app:layout_constraintTop_toBottomOf="@+id/FirstVolleyballTeamCounter"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.785" />
+
     <TextView
         android:id="@+id/FootballGameTimer"
-        android:layout_width="80dp"
-        android:layout_height="29dp"
+        android:layout_width="92dp"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="37dp"
         android:gravity="center"
