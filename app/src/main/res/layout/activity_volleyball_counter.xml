@@ -14,7 +14,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginBottom="210dp"
         android:background="@drawable/tablovectr"
-        android:saveEnabled="false"
+        android:saveEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -164,7 +164,7 @@
         android:layout_width="80dp"
         android:layout_height="29dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="37dp"
         android:gravity="center"
         android:hapticFeedbackEnabled="false"
         android:text="00 : 00"
@@ -173,7 +173,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <ImageButton
         android:id="@+id/VolleyballPauseGame"
