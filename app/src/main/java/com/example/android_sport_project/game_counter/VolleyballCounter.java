@@ -1,6 +1,7 @@
 package com.example.android_sport_project.game_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -40,6 +41,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
     private int seconds;
     private boolean running;
 
+
     public static SportGame volleyballGame = new SportGame();
 
     @Override
@@ -64,6 +66,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
 
         timerGameRun();
         final Button addOnePointToFirstTeam = (Button) findViewById(R.id.VolleyballAddOnePointToFirstTeam);
+
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter < LIMIT) {

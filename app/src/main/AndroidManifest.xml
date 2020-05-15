@@ -25,6 +25,7 @@
         </activity>
         <activity android:theme="@style/AppTheme4" android:name=".Menu" />
         <activity android:theme="@style/result_table" android:name=".result_page.Results" />
+        <activity android:theme="@style/result_table" android:name=".FinalScreen" />
     </application>
 
 </manifest>

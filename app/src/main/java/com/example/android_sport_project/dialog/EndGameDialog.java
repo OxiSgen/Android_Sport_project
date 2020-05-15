@@ -11,6 +11,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.android_sport_project.FinalScreen;
 import com.example.android_sport_project.Menu;
 import com.example.android_sport_project.R;
 import com.example.android_sport_project.game_counter.Counter;
@@ -35,7 +36,7 @@ public class EndGameDialog extends DialogFragment {
                                                 int id) {
                                 gameCounter.saveGame();
                                 dialog.cancel();
-                                Intent myIntent = new Intent(context, Menu.class );
+                                Intent myIntent = new Intent(context, FinalScreen.class );
                                 startActivityForResult(myIntent, 0);
                             }
                         })

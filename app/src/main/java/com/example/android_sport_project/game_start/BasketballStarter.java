@@ -26,8 +26,8 @@ public class BasketballStarter extends AppCompatActivity {
          startSecondTeamName = (EditText) findViewById(R.id.BasketballSecondTeamStart);
 
         Button bBCounter = (Button) findViewById(R.id.BbCounter);
-        bBCounter.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+                bBCounter.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View view) {
                 BasketballCounter.basketballGame.setFirstTeamName( String.valueOf(startFirstTeamName.getText()));
                 BasketballCounter.basketballGame.setSecondTeamName(String.valueOf(startSecondTeamName.getText()));
                 BasketballCounter.basketballGame.setMatchName(String.valueOf(startMatchName.getText()));
