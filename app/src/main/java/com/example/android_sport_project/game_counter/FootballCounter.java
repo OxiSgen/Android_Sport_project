@@ -38,6 +38,11 @@ public class FootballCounter extends AppCompatActivity implements Counter{
     public static SportGame footballGame = new SportGame();
 
     @Override
+    public SportGame getSportGame() {
+        return footballGame;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_football_counter);

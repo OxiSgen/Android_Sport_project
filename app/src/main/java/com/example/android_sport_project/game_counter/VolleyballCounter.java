@@ -45,6 +45,11 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
     public static SportGame volleyballGame = new SportGame();
 
     @Override
+    public SportGame getSportGame() {
+        return volleyballGame;
+    }
+
+    @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_volleyball_counter);
@@ -110,7 +115,6 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         endGame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 running = false;
-                // saveGame();
                 EndGameDialog dialog = new EndGameDialog(VolleyballCounter.this, view.getContext());
                 dialog.show(getSupportFragmentManager(), "custom");
                 dialog.setCancelable(false);

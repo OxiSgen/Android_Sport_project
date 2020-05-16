@@ -23,7 +23,7 @@ public class EndGameDialog extends DialogFragment {
 
     public EndGameDialog(Counter counter, Context context) {
         this.gameCounter = counter;
-        this.context=context;
+        this.context = context;
     }
 
     @NonNull
@@ -36,7 +36,9 @@ public class EndGameDialog extends DialogFragment {
                                                 int id) {
                                 gameCounter.saveGame();
                                 dialog.cancel();
-                                Intent myIntent = new Intent(context, FinalScreen.class );
+
+                                FinalScreen.sportGameFinalScreen = gameCounter.getSportGame();
+                                Intent myIntent = new Intent(context, FinalScreen.class);
                                 startActivityForResult(myIntent, 0);
                             }
                         })

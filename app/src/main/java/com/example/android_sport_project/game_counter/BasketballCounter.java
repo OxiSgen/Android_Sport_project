@@ -38,6 +38,12 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
     public static SportGame basketballGame = new SportGame();
 
     @Override
+    public SportGame getSportGame() {
+        return basketballGame;
+    }
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basketball_counter);
