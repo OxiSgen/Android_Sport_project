@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android_sport_project.FinalScreen;
 import com.example.android_sport_project.Menu;
 import com.example.android_sport_project.R;
 import com.example.android_sport_project.dialog.EndGameDialog;
@@ -32,9 +33,13 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
     private TextView matchNameView;
     private TextView firstTeamNameView;
     private TextView secondTeamNameView;
-    private TextView gameTimer;
     private int firstTeamCounter;
     private int secondTeamCounter;
+    private int firstTeamPartyCounter;
+    private int secondTeamPartyCounter;
+    private TextView firstTeamPartyResultView;
+    private TextView secondTeamPartyResultView;
+    private TextView gameTimer;
     private final int LIMIT = 25;
     private final int MIN = 0;
     private String time;
@@ -55,6 +60,8 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         setContentView(R.layout.activity_volleyball_counter);
         firstTeamCounter = 0;
         secondTeamCounter = 0;
+        firstTeamPartyCounter = 0;
+        secondTeamPartyCounter = 0;
         running = true;
 
         counterFirstTeam = (TextView) findViewById(R.id.FirstVolleyballTeamCounter);
@@ -63,7 +70,8 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         firstTeamNameView = (TextView) findViewById(R.id.VolleyballTeamOneName);
         secondTeamNameView = (TextView) findViewById(R.id.VolleyballTeamTwoName);
         gameTimer = (TextView) findViewById(R.id.VolleyballGameTimer);
-
+        firstTeamPartyResultView = (TextView) findViewById(R.id.FirstVolleyballTeamGameCounter);
+        secondTeamPartyResultView = (TextView) findViewById(R.id.SecondVolleyballTeamGameCounter);
 
         matchNameView.setText(volleyballGame.getMatchName());
         firstTeamNameView.setText(volleyballGame.getFirstTeamName());
@@ -74,10 +82,9 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
 
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (firstTeamCounter < LIMIT) {
-                    firstTeamCounter++;
-                    counterFirstTeam.setText(String.valueOf(firstTeamCounter));
-                }
+                firstTeamCounter++;
+                counterFirstTeam.setText(String.valueOf(firstTeamCounter));
+                checkVolleyballGameCounter();
             }
         });
 
@@ -94,10 +101,10 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         final Button addOnePointToSecondTeam = (Button) findViewById(R.id.VolleyballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (secondTeamCounter < LIMIT) {
-                    secondTeamCounter++;
-                    counterSecondTeam.setText(String.valueOf(secondTeamCounter));
-                }
+
+                secondTeamCounter++;
+                counterSecondTeam.setText(String.valueOf(secondTeamCounter));
+                checkVolleyballGameCounter();
             }
         });
 
@@ -145,6 +152,39 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         );
     }
 
+    private void checkVolleyballGameCounter() {
+        if (firstTeamCounter >= LIMIT & (firstTeamCounter - secondTeamCounter) >= 2) {
+            if (firstTeamPartyCounter < 5) {
+                firstTeamPartyCounter++;
+            }
+            firstTeamPartyResultView.setText(String.valueOf(firstTeamPartyCounter));
+
+            firstTeamCounter = 0;
+            secondTeamCounter = 0;
+            counterFirstTeam.setText(String.valueOf(firstTeamCounter));
+            counterSecondTeam.setText(String.valueOf(secondTeamCounter));
+        }
+        if (secondTeamCounter >= LIMIT & (secondTeamCounter - firstTeamCounter) >= 2) {
+            if (secondTeamPartyCounter < 5) {
+                secondTeamPartyCounter++;
+            }
+            secondTeamPartyResultView.setText(String.valueOf(secondTeamPartyCounter));
+
+            firstTeamCounter = 0;
+            secondTeamCounter = 0;
+            counterFirstTeam.setText(String.valueOf(firstTeamCounter));
+            counterSecondTeam.setText(String.valueOf(secondTeamCounter));
+        }
+
+        if(firstTeamPartyCounter ==3 || secondTeamPartyCounter==3){
+            saveGame();
+            FinalScreen.sportGameFinalScreen = volleyballGame;
+            Intent myIntent = new Intent(this, FinalScreen.class);
+            startActivityForResult(myIntent, 0);
+        }
+    }
+
+
     private void timerGameRun() {
         final Handler handler = new Handler();
         handler.post(new Runnable() {
@@ -165,8 +205,8 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
 
     @Override
     public void saveGame() {
-        VolleyballCounter.volleyballGame.setFirstTeamCount(firstTeamCounter);
-        VolleyballCounter.volleyballGame.setSecondTeamCount(secondTeamCounter);
+        VolleyballCounter.volleyballGame.setFirstTeamCount(firstTeamPartyCounter);
+        VolleyballCounter.volleyballGame.setSecondTeamCount(secondTeamPartyCounter);
         VolleyballCounter.volleyballGame.setGameType(1);//Для волейболла тип 1
         VolleyballCounter.volleyballGame.setGameTime(time);
 
