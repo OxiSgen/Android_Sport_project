@@ -1,10 +1,14 @@
 package com.example.android_sport_project;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +23,7 @@ public class FinalScreen extends AppCompatActivity {
     private TextView teamTwoNameView;
     private TextView teamOneScoreView;
     private TextView teamTwoScoreView;
+    private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +34,23 @@ public class FinalScreen extends AppCompatActivity {
         teamOneNameView = (TextView) findViewById(R.id.FinalScreenTeamOne);
         teamTwoNameView = (TextView) findViewById(R.id.FinalScreenTeamTwo);
         teamOneScoreView = (TextView) findViewById(R.id.FinalScreenScoreTeamOne);
-        teamTwoScoreView = (TextView) findViewById(R.id.FinalScreenScoreTeamTwo);
+        image = (ImageView) findViewById(R.id.imageView3);
+       // teamTwoScoreView = (TextView) findViewById(R.id.FinalScreenScoreTeamTwo);
 
         teamOneNameView.setText(sportGameFinalScreen.getFirstTeamName());
         teamTwoNameView.setText(sportGameFinalScreen.getSecondTeamName());
-        teamOneScoreView.setText(String.valueOf(sportGameFinalScreen.getFirstTeamCount()));
-        teamTwoScoreView.setText(String.valueOf(sportGameFinalScreen.getSecondTeamCount()));
+        teamOneScoreView.setText(String.format("%s : %s", sportGameFinalScreen.getFirstTeamCount(), sportGameFinalScreen.getSecondTeamCount()));
+       // teamTwoScoreView.setText(String.valueOf(sportGameFinalScreen.getSecondTeamCount()));
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int screenWidth = displaymetrics.widthPixels;
         int screenHeight = displaymetrics.heightPixels;
         getWindow().setBackgroundDrawableResource(R.drawable.kruglie_ugli);
-        getWindow().setLayout((int) (screenWidth / 1.45), (int) (screenHeight / 1.55));
+        getWindow().setLayout((int) (screenWidth / 1.35), (int) (screenHeight / 1.45));
+
+
+       // image.setImageResource(R.drawable.emoji_events);
 
         Button Bmain = (Button) findViewById(R.id.button_na_main_screen);
         Bmain.setOnClickListener(new View.OnClickListener() {
