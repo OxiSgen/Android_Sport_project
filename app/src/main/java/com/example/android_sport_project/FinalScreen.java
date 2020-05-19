@@ -42,12 +42,14 @@ public class FinalScreen extends AppCompatActivity {
         teamOneScoreView.setText(String.format("%s : %s", sportGameFinalScreen.getFirstTeamCount(), sportGameFinalScreen.getSecondTeamCount()));
        // teamTwoScoreView.setText(String.valueOf(sportGameFinalScreen.getSecondTeamCount()));
 
+        final float scale = getResources().getDisplayMetrics().density;
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int screenWidth = displaymetrics.widthPixels;
         int screenHeight = displaymetrics.heightPixels;
         getWindow().setBackgroundDrawableResource(R.drawable.kruglie_ugli);
-        getWindow().setLayout((int) (screenWidth / 1.35), (int) (screenHeight / 1.45));
+        getWindow().setLayout((int) (screenWidth / 1.35), (int) (426 * scale + 0.5f));
+
 
 
        // image.setImageResource(R.drawable.emoji_events);
