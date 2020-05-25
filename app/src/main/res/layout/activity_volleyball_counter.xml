@@ -25,9 +25,10 @@
     <ImageButton
         android:id="@+id/VolleyballAddOnePointToFirstTeam"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:src="@drawable/arrow_up"
+        android:layout_height="50dp"
         android:background="#00000000"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_up"
         app:layout_constraintBottom_toBottomOf="@+id/VolleyballAddOnePointToSecondTeam"
         app:layout_constraintEnd_toEndOf="@+id/VolleyballRemoveOnePointFromFirstTeam"
         app:layout_constraintHorizontal_bias="0.05"
@@ -54,15 +55,16 @@
     <ImageButton
         android:id="@+id/VolleyballAddOnePointToSecondTeam"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="#00000000"
+        android:paddingBottom="10dp"
         android:src="@drawable/arrow_up"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/VolleyballRemoveOnePointFromSecondTeam"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/VolleyballRemoveOnePointFromSecondTeam"
         app:layout_constraintTop_toBottomOf="@+id/VolleyballPauseGame"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.189"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -205,8 +207,8 @@
 
     <ImageView
         android:id="@+id/vs_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/VolleyballTeamTwoName"
         app:layout_constraintStart_toEndOf="@+id/VolleyballTeamOneName"

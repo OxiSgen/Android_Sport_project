@@ -56,7 +56,8 @@
     <ImageButton
     android:id="@+id/BasketballAddOnePointToFirstTeam"
     android:layout_width="wrap_content"
-    android:layout_height="40dp"
+    android:layout_height="50dp"
+    android:paddingBottom="10dp"
     android:src="@drawable/arrow_up"
     android:background="#00000000"
     app:layout_constraintBottom_toBottomOf="@+id/BasketballAddOnePointToSecondTeam"
@@ -67,22 +68,21 @@
     app:layout_constraintVertical_bias="1.0"
     tools:ignore="MissingConstraints" />
 
+
     <ImageButton
         android:id="@+id/BasketballAddOnePointToSecondTeam"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:src="@drawable/arrow_up"
+        android:layout_height="50dp"
         android:background="#00000000"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/BasketballRemoveOnePointFromSecondTeam"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/BasketballRemoveOnePointFromSecondTeam"
         app:layout_constraintTop_toBottomOf="@+id/BasketballPauseGame"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.189"
         tools:ignore="MissingConstraints" />
-
-
-
 
     <Button
         android:id="@+id/BasketballEndMatch"
@@ -207,8 +207,8 @@
 
     <ImageView
         android:id="@+id/vs_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/SecondBasketballTeamName"
         app:layout_constraintStart_toEndOf="@+id/FirstBasketballTeamName"
@@ -249,19 +249,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BasketballAddOnePointToFirstTeam"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintTop_toTopOf="@+id/BasketballAddOnePointToFirstTeam"
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/BasketballAddTwoPointToFirstTeam"
         android:layout_width="64dp"
         android:layout_height="50dp"
         android:background="@drawable/plus_two"
-        app:layout_constraintBottom_toTopOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+        app:layout_constraintBottom_toBottomOf="@+id/BasketballRemoveOnePointFromFirstTeam"
         app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BasketballAddThreePointToFirstTeam"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
         android:id="@+id/BasketballAddThreePointToSecondTeam"
@@ -271,17 +271,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/relativeLayout"
-        app:layout_constraintTop_toBottomOf="@+id/BasketballAddOnePointToSecondTeam"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintTop_toTopOf="@+id/BasketballAddOnePointToSecondTeam"
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/BasketballAddTwoPointToSecondTeam"
         android:layout_width="64dp"
         android:layout_height="50dp"
         android:background="@drawable/plus_two"
-        app:layout_constraintBottom_toTopOf="@+id/BasketballRemoveOnePointFromSecondTeam"
+        app:layout_constraintBottom_toBottomOf="@+id/BasketballRemoveOnePointFromSecondTeam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/relativeLayout"
         app:layout_constraintTop_toBottomOf="@+id/BasketballAddThreePointToSecondTeam"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.25" />
 </androidx.constraintlayout.widget.ConstraintLayout>
