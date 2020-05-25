@@ -81,16 +81,14 @@
         android:id="@+id/VolleyballEndMatch"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginTop="36dp"
         android:background="@drawable/rectangle_1"
         android:text="Закончить матч"
         android:textAppearance="@style/Button_Game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.19999999"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
         tools:ignore="MissingConstraints" />
 
     <RelativeLayout
@@ -98,11 +96,11 @@
         android:layout_width="228dp"
         android:layout_height="106dp"
         android:background="@drawable/table_clock"
-        app:layout_constraintBottom_toTopOf="@+id/VolleyballEndMatch"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VolleyballPauseGame"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.22000003">
 
         <TextView
             android:id="@+id/FirstVolleyballTeamCounter"
