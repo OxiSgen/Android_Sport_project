@@ -215,4 +215,6 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             Toast.makeText(this, "Не удалось сохранить данные", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onBackPressed() {}
 }

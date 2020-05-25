@@ -62,4 +62,6 @@ public class FinalScreen extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {}
 }

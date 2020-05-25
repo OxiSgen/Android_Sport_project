@@ -226,4 +226,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         running = !running;
     }
 
+    @Override
+    public void onBackPressed() {}
+
 }
