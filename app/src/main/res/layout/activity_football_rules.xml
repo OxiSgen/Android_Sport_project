@@ -157,6 +157,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/fb_rule2"
+                        android:layout_marginTop="30dp"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/Text_low_Screen3" />
                 </LinearLayout>
