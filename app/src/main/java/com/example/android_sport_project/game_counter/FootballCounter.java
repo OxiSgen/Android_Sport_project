@@ -64,7 +64,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
                secondTeamNameView.setText(footballGame.getSecondTeamName());
 
         timerGameRun();
-        final Button addOnePointToFirstTeam = (Button) findViewById(R.id.FootballAddOnePointToFirstTeam);
+        final ImageButton addOnePointToFirstTeam = (ImageButton) findViewById(R.id.FootballAddOnePointToFirstTeam);
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 firstTeamCounter++;
@@ -72,7 +72,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.FootballRemoveOnePointFromFirstTeam);
+        final ImageButton removeOnePointFromFirstTeam = (ImageButton) findViewById(R.id.FootballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {
@@ -82,7 +82,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button addOnePointToSecondTeam = (Button) findViewById(R.id.FootballAddOnePointToSecondTeam);
+        final ImageButton addOnePointToSecondTeam = (ImageButton) findViewById(R.id.FootballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 secondTeamCounter++;
@@ -90,7 +90,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.FootballRemoveOnePointFromSecondTeam);
+        final ImageButton removeOnePointFromSecondTeam = (ImageButton) findViewById(R.id.FootballRemoveOnePointFromSecondTeam);
         removeOnePointFromSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter > MIN) {
