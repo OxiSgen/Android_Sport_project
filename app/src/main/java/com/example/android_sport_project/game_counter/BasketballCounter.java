@@ -149,7 +149,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                 stopStartTime();
                 if (running) {
                     pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(true);
+                    /* addOnePointToFirstTeam.setEnabled(true);
                     addTwoPointToFirstTeam.setEnabled(true);
                     addThreePointToFirstTeam.setEnabled(true);
                     addOnePointToSecondTeam.setEnabled(true);
@@ -157,10 +157,10 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     addThreePointToSecondTeam.setEnabled(true);
                     removeOnePointFromFirstTeam.setEnabled(true);
                     removeOnePointFromSecondTeam.setEnabled(true);
-                    endGame.setEnabled(true);
+                    endGame.setEnabled(true); */
                 } else {
                     pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(false);
+                    /* addOnePointToFirstTeam.setEnabled(false);
                     addTwoPointToFirstTeam.setEnabled(false);
                     addThreePointToFirstTeam.setEnabled(false);
                     addOnePointToSecondTeam.setEnabled(false);
@@ -168,7 +168,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     addThreePointToSecondTeam.setEnabled(false);
                     removeOnePointFromFirstTeam.setEnabled(false);
                     removeOnePointFromSecondTeam.setEnabled(false);
-                    endGame.setEnabled(false);
+                    endGame.setEnabled(false); */
                 }
             }
         });

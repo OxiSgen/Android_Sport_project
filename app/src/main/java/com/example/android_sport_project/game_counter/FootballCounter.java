@@ -116,18 +116,18 @@ public class FootballCounter extends AppCompatActivity implements Counter{
                 stopStartTime();
                 if (running) {
                     pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(true);
+                   /* addOnePointToFirstTeam.setEnabled(true);
                     addOnePointToSecondTeam.setEnabled(true);
                     removeOnePointFromFirstTeam.setEnabled(true);
                     removeOnePointFromSecondTeam.setEnabled(true);
-                    endGame.setEnabled(true);
+                    endGame.setEnabled(true); */
                 } else {
                     pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(false);
+                    /* addOnePointToFirstTeam.setEnabled(false);
                     addOnePointToSecondTeam.setEnabled(false);
                     removeOnePointFromFirstTeam.setEnabled(false);
                     removeOnePointFromSecondTeam.setEnabled(false);
-                    endGame.setEnabled(false);
+                    endGame.setEnabled(false); */
                 }
             }
         });
@@ -175,4 +175,24 @@ public class FootballCounter extends AppCompatActivity implements Counter{
     }
     @Override
     public void onBackPressed() {}
+
+/*
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Выйти из приложения?")
+                .setMessage("Вы действительно хотите выйти?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Intent i = new Intent(Intent.ACTION_MAIN);
+                        i.addCategory(Intent.CATEGORY_HOME);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                    }
+                }).create().show();
+    }
+
+ */
+
 }
