@@ -72,7 +72,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.FoorballRemoveOnePointFromFirstTeam);
+        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.FootballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {

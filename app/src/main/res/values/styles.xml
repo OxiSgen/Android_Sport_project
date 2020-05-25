@@ -113,7 +113,7 @@
     </style>
     <style name="game_count">
         <item name="android:textSize">
-            50sp
+            37sp
         </item>
         <item name="android:textColor">
             #DCC275
