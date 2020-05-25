@@ -3,7 +3,9 @@ package com.example.android_sport_project.game_counter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -227,6 +229,16 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Покинуть матч?")
+                .setMessage("Вы действительно хотите покинуть матч?" + "\n" + "Текущие результаты не будут сохранены.")
+                .setNegativeButton("Нет", null)
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                       VolleyballCounter.super.onBackPressed();
+                    }
+                }).create().show();
+    }
 
 }
