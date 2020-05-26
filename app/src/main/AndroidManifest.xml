@@ -4,9 +4,10 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/logo"
+        android:label="Спорт Табло">
         <activity android:screenOrientation="locked" android:theme="@style/AppTheme4" android:name=".game_counter.VolleyballCounter" />
         <activity android:screenOrientation="locked" android:theme="@style/AppTheme4" android:name=".game_counter.BasketballCounter" />
         <activity android:screenOrientation="locked" android:theme="@style/AppTheme4" android:name=".game_counter.FootballCounter" />
