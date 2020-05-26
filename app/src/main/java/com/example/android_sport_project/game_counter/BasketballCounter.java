@@ -142,6 +142,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                 EndGameDialog dialog = new EndGameDialog(BasketballCounter.this, view.getContext());
                 dialog.show(getSupportFragmentManager(), "custom");
                 dialog.setCancelable(false);
+
             }
         });
 
@@ -227,6 +228,10 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     public void onClick(DialogInterface arg0, int arg1) {
                         BasketballCounter.super.onBackPressed();
                     }
-                }).create().show();
+                })
+                .create()
+                .show();
     }
+
+
 }

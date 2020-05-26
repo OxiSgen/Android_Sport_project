@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -28,6 +29,7 @@ public class FinalScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FinalScreen.this.setFinishOnTouchOutside(false);
         supportRequestWindowFeature(getWindow().FEATURE_NO_TITLE);
         setContentView(R.layout.final_fcreen);
 
@@ -64,4 +66,5 @@ public class FinalScreen extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {}
+
 }
