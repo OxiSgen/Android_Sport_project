@@ -7,165 +7,281 @@
     android:background="@drawable/bg_basketball_counter"
     tools:context=".game_counter.BasketballCounter">
 
-    <TextView
-        android:id="@+id/BasketballMatchName"
-        android:layout_width="181dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/FirstBasketballTeamName"
-        android:layout_width="59dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/SecondBasketballTeamName"
-        android:layout_width="62dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="60dp"
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="210dp"
+        android:background="@drawable/table_main"
+        android:saveEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/BasketballFirstTeamCounter"
-        android:layout_width="62dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="164dp"
-        android:text="0"
-        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/BasketballSecondTeamCounter"
-        android:layout_width="63dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="60dp"
-        android:text="0"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/BasketballGameTimer"
-        android:layout_width="144dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="132dp"
-        android:text="00:00:00"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/BasketballPauseGame"
-        android:layout_width="139dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="108dp"
-        android:src="@drawable/ic_stop_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/BasketballRemoveOnePointFromFirstTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:paddingBottom="9dp"
+        android:src="@drawable/arrow_down"
+        android:background="#00000000"
+        app:layout_constraintBottom_toTopOf="@+id/BasketballEndMatch"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/BasketballRemoveOnePointFromSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="#00000000"
+        android:paddingBottom="9dp"
+        android:src="@drawable/arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toEndOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+        app:layout_constraintTop_toTopOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+    android:id="@+id/BasketballAddOnePointToFirstTeam"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:paddingBottom="10dp"
+    android:src="@drawable/arrow_up"
+    android:background="#00000000"
+    app:layout_constraintBottom_toBottomOf="@+id/BasketballAddOnePointToSecondTeam"
+    app:layout_constraintEnd_toEndOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+    app:layout_constraintHorizontal_bias="0.05"
+    app:layout_constraintStart_toStartOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+    app:layout_constraintTop_toTopOf="@+id/BasketballAddOnePointToSecondTeam"
+    app:layout_constraintVertical_bias="1.0"
+    tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/BasketballAddOnePointToSecondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#00000000"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/BasketballRemoveOnePointFromSecondTeam"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/BasketballRemoveOnePointFromSecondTeam"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballPauseGame"
+        app:layout_constraintVertical_bias="0.189"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/BasketballEndMatch"
-        android:layout_width="137dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="108dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/rectangle_1"
         android:text="Закончить матч"
+        android:textAppearance="@style/Button_Game"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="228dp"
+        android:layout_height="106dp"
+        android:background="@drawable/table_clock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballPauseGame"
+        app:layout_constraintVertical_bias="0.22000003">
+
+        <TextView
+            android:id="@+id/BasketballFirstTeamCounter"
+            android:layout_width="111dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="00"
+            android:textAppearance="@style/team_counter"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/BasketballSecondTeamCounter"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="2dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="00"
+            android:textAppearance="@style/team_counter"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/FirstBasketballTeamName"
+        android:layout_width="128dp"
+        android:layout_height="29dp"
+        android:background="@drawable/table_team1"
+        android:gravity="center"
+        android:textAppearance="@style/volleyball_counter_team"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/SecondBasketballTeamName"
+        android:layout_width="128dp"
+        android:layout_height="29dp"
+        android:background="@drawable/table_team2"
+        android:gravity="center"
+        android:textAppearance="@style/volleyball_counter_team"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/BasketballMatchName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/match_name"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/BasketballGameTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:background="@drawable/table_clocks"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="false"
+        android:text=" 00 : 00"
+        android:textAppearance="@style/timer"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <ImageButton
+        android:id="@+id/BasketballPauseGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/play_button"
+        android:src="@drawable/ic_stop_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballGameTimer"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <ImageView
+        android:id="@+id/vs_logo"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/SecondBasketballTeamName"
+        app:layout_constraintStart_toEndOf="@+id/FirstBasketballTeamName"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.273"
+        app:srcCompat="@drawable/vs" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_time"
+        android:text="ВРЕМЯ"
+        android:textAlignment="center"
+        android:textAppearance="@style/time_text"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.39" />
+
+
+    <ImageView
+        android:id="@+id/strip"
+        android:layout_width="11dp"
+        android:layout_height="138dp"
+        app:layout_constraintBottom_toTopOf="@+id/BasketballRemoveOnePointFromSecondTeam"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballAddOnePointToSecondTeam"
+        app:srcCompat="@drawable/table_strape" />
 
     <Button
         android:id="@+id/BasketballAddThreePointToFirstTeam"
-        android:layout_width="82dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="444dp"
-        android:text="+3"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:background="@drawable/plus_three"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BasketballAddOnePointToFirstTeam"
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/BasketballAddTwoPointToFirstTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="384dp"
-        android:text="+2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/BasketballAddOnePointToFirstTeam"
-        android:layout_width="87dp"
+        android:layout_width="64dp"
         android:layout_height="50dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="316dp"
-        android:text="+1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/BasketballRemoveOnePointFromFirstTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="248dp"
-        android:text="-1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/plus_two"
+        app:layout_constraintBottom_toBottomOf="@+id/BasketballRemoveOnePointFromFirstTeam"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballAddThreePointToFirstTeam"
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
         android:id="@+id/BasketballAddThreePointToSecondTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="440dp"
-        android:text="+3"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:background="@drawable/plus_three"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/BasketballAddOnePointToSecondTeam"
+        app:layout_constraintVertical_bias="0.112" />
 
     <Button
         android:id="@+id/BasketballAddTwoPointToSecondTeam"
-        android:layout_width="87dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="384dp"
-        android:text="+2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/BasketballAddOnePointToSecondTeam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="316dp"
-        android:text="+1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/BasketballRemoveOnePointFromSecondTeam"
-        android:layout_width="93dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="248dp"
-        android:text="-1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:background="@drawable/plus_two"
+        app:layout_constraintBottom_toBottomOf="@+id/BasketballRemoveOnePointFromSecondTeam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/BasketballAddThreePointToSecondTeam"
+        app:layout_constraintVertical_bias="0.25" />
 </androidx.constraintlayout.widget.ConstraintLayout>

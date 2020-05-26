@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment;
 import com.example.android_sport_project.FinalScreen;
 import com.example.android_sport_project.Menu;
 import com.example.android_sport_project.R;
+import com.example.android_sport_project.game_counter.BasketballCounter;
 import com.example.android_sport_project.game_counter.Counter;
 
 public class EndGameDialog extends DialogFragment {

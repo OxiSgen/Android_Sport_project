@@ -2,6 +2,8 @@ package com.example.android_sport_project.game_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -64,7 +66,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
                secondTeamNameView.setText(footballGame.getSecondTeamName());
 
         timerGameRun();
-        final Button addOnePointToFirstTeam = (Button) findViewById(R.id.FootballAddOnePointToFirstTeam);
+        final ImageButton addOnePointToFirstTeam = (ImageButton) findViewById(R.id.FootballAddOnePointToFirstTeam);
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 firstTeamCounter++;
@@ -72,7 +74,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.FoorballRemoveOnePointFromFirstTeam);
+        final ImageButton removeOnePointFromFirstTeam = (ImageButton) findViewById(R.id.FootballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {
@@ -82,7 +84,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button addOnePointToSecondTeam = (Button) findViewById(R.id.FootballAddOnePointToSecondTeam);
+        final ImageButton addOnePointToSecondTeam = (ImageButton) findViewById(R.id.FootballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 secondTeamCounter++;
@@ -90,7 +92,7 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.FootballRemoveOnePointFromSecondTeam);
+        final ImageButton removeOnePointFromSecondTeam = (ImageButton) findViewById(R.id.FootballRemoveOnePointFromSecondTeam);
         removeOnePointFromSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter > MIN) {
@@ -116,18 +118,18 @@ public class FootballCounter extends AppCompatActivity implements Counter{
                 stopStartTime();
                 if (running) {
                     pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(true);
+                   /* addOnePointToFirstTeam.setEnabled(true);
                     addOnePointToSecondTeam.setEnabled(true);
                     removeOnePointFromFirstTeam.setEnabled(true);
                     removeOnePointFromSecondTeam.setEnabled(true);
-                    endGame.setEnabled(true);
+                    endGame.setEnabled(true); */
                 } else {
                     pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(false);
+                    /* addOnePointToFirstTeam.setEnabled(false);
                     addOnePointToSecondTeam.setEnabled(false);
                     removeOnePointFromFirstTeam.setEnabled(false);
                     removeOnePointFromSecondTeam.setEnabled(false);
-                    endGame.setEnabled(false);
+                    endGame.setEnabled(false); */
                 }
             }
         });
@@ -173,4 +175,21 @@ public class FootballCounter extends AppCompatActivity implements Counter{
             Toast.makeText(this, "Не удалось сохранить данные", Toast.LENGTH_LONG).show();
         }
     }
+
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Покинуть матч?")
+                .setMessage("Вы действительно хотите покинуть матч?" + "\n" + "Текущие результаты не будут сохранены.")
+                .setNegativeButton("Нет", null)
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        FootballCounter.super.onBackPressed();
+                    }
+                }).create().show();
+    }
+
+
+
 }

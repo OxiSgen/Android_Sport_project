@@ -2,7 +2,9 @@ package com.example.android_sport_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -59,8 +61,9 @@ public class Menu extends AppCompatActivity {
 
         });
 
+
     }
 
-
-
+    @Override
+    public void onBackPressed() {}
 }

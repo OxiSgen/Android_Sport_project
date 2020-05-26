@@ -3,7 +3,9 @@ package com.example.android_sport_project.game_counter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -78,7 +80,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
         secondTeamNameView.setText(volleyballGame.getSecondTeamName());
 
         timerGameRun();
-        final Button addOnePointToFirstTeam = (Button) findViewById(R.id.VolleyballAddOnePointToFirstTeam);
+        final ImageButton addOnePointToFirstTeam = (ImageButton) findViewById(R.id.VolleyballAddOnePointToFirstTeam);
 
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -88,7 +90,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
             }
         });
 
-        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.VolleyballRemoveOnePointFromFirstTeam);
+        final ImageButton removeOnePointFromFirstTeam = (ImageButton) findViewById(R.id.VolleyballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {
@@ -98,7 +100,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
             }
         });
 
-        final Button addOnePointToSecondTeam = (Button) findViewById(R.id.VolleyballAddOnePointToSecondTeam);
+        final ImageButton addOnePointToSecondTeam = (ImageButton) findViewById(R.id.VolleyballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
@@ -108,7 +110,7 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
             }
         });
 
-        final Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.VolleyballRemoveOnePointFromSecondTeam);
+        final ImageButton removeOnePointFromSecondTeam = (ImageButton) findViewById(R.id.VolleyballRemoveOnePointFromSecondTeam);
         removeOnePointFromSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter > MIN) {
@@ -134,18 +136,18 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
                                              stopStartTime();
                                              if (running) {
                                                  pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
-                                                 addOnePointToFirstTeam.setEnabled(true);
+                                                 /* addOnePointToFirstTeam.setEnabled(true);
                                                  addOnePointToSecondTeam.setEnabled(true);
                                                  removeOnePointFromFirstTeam.setEnabled(true);
                                                  removeOnePointFromSecondTeam.setEnabled(true);
-                                                 endGame.setEnabled(true);
+                                                 endGame.setEnabled(true); */
                                              } else {
                                                  pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                                                 addOnePointToFirstTeam.setEnabled(false);
+                                               /*   addOnePointToFirstTeam.setEnabled(false);
                                                  addOnePointToSecondTeam.setEnabled(false);
                                                  removeOnePointFromFirstTeam.setEnabled(false);
                                                  removeOnePointFromSecondTeam.setEnabled(false);
-                                                 endGame.setEnabled(false);
+                                                 endGame.setEnabled(false); */
                                              }
                                          }
                                      }
@@ -224,6 +226,19 @@ public class VolleyballCounter extends AppCompatActivity implements Counter {
 
     public void stopStartTime() {
         running = !running;
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Покинуть матч?")
+                .setMessage("Вы действительно хотите покинуть матч?" + "\n" + "Текущие результаты не будут сохранены.")
+                .setNegativeButton("Нет", null)
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                       VolleyballCounter.super.onBackPressed();
+                    }
+                }).create().show();
     }
 
 }

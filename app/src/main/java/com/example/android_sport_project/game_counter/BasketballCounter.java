@@ -2,6 +2,8 @@ package com.example.android_sport_project.game_counter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -65,7 +67,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
 
         timerGameRun();
 
-        final Button addOnePointToFirstTeam = (Button) findViewById(R.id.BasketballAddOnePointToFirstTeam);
+        final ImageButton addOnePointToFirstTeam = (ImageButton) findViewById(R.id.BasketballAddOnePointToFirstTeam);
         addOnePointToFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 firstTeamCounter++;
@@ -89,7 +91,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromFirstTeam = (Button) findViewById(R.id.BasketballRemoveOnePointFromFirstTeam);
+        final ImageButton removeOnePointFromFirstTeam = (ImageButton) findViewById(R.id.BasketballRemoveOnePointFromFirstTeam);
         removeOnePointFromFirstTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (firstTeamCounter > MIN) {
@@ -99,7 +101,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button addOnePointToSecondTeam = (Button) findViewById(R.id.BasketballAddOnePointToSecondTeam);
+        final ImageButton addOnePointToSecondTeam = (ImageButton) findViewById(R.id.BasketballAddOnePointToSecondTeam);
         addOnePointToSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 secondTeamCounter++;
@@ -123,7 +125,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             }
         });
 
-        final Button removeOnePointFromSecondTeam = (Button) findViewById(R.id.BasketballRemoveOnePointFromSecondTeam);
+        final ImageButton removeOnePointFromSecondTeam = (ImageButton) findViewById(R.id.BasketballRemoveOnePointFromSecondTeam);
         removeOnePointFromSecondTeam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (secondTeamCounter > MIN) {
@@ -140,6 +142,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                 EndGameDialog dialog = new EndGameDialog(BasketballCounter.this, view.getContext());
                 dialog.show(getSupportFragmentManager(), "custom");
                 dialog.setCancelable(false);
+
             }
         });
 
@@ -149,7 +152,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                 stopStartTime();
                 if (running) {
                     pauseGame.setImageResource(R.drawable.ic_stop_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(true);
+                    /* addOnePointToFirstTeam.setEnabled(true);
                     addTwoPointToFirstTeam.setEnabled(true);
                     addThreePointToFirstTeam.setEnabled(true);
                     addOnePointToSecondTeam.setEnabled(true);
@@ -157,10 +160,10 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     addThreePointToSecondTeam.setEnabled(true);
                     removeOnePointFromFirstTeam.setEnabled(true);
                     removeOnePointFromSecondTeam.setEnabled(true);
-                    endGame.setEnabled(true);
+                    endGame.setEnabled(true); */
                 } else {
                     pauseGame.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                    addOnePointToFirstTeam.setEnabled(false);
+                    /* addOnePointToFirstTeam.setEnabled(false);
                     addTwoPointToFirstTeam.setEnabled(false);
                     addThreePointToFirstTeam.setEnabled(false);
                     addOnePointToSecondTeam.setEnabled(false);
@@ -168,7 +171,7 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
                     addThreePointToSecondTeam.setEnabled(false);
                     removeOnePointFromFirstTeam.setEnabled(false);
                     removeOnePointFromSecondTeam.setEnabled(false);
-                    endGame.setEnabled(false);
+                    endGame.setEnabled(false); */
                 }
             }
         });
@@ -215,4 +218,20 @@ public class BasketballCounter extends AppCompatActivity implements Counter{
             Toast.makeText(this, "Не удалось сохранить данные", Toast.LENGTH_LONG).show();
         }
     }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Покинуть матч?")
+                .setMessage("Вы действительно хотите покинуть матч?" + "\n" + "Текущие результаты не будут сохранены.")
+                .setNegativeButton("Нет", null)
+                .setPositiveButton("да", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        BasketballCounter.super.onBackPressed();
+                    }
+                })
+                .create()
+                .show();
+    }
+
+
 }
