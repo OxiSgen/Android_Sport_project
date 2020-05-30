@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logo_app"
         android:label="Спорт Табло">
         <activity android:screenOrientation="locked" android:theme="@style/AppTheme4" android:name=".game_counter.VolleyballCounter" />
         <activity android:screenOrientation="locked" android:theme="@style/AppTheme4" android:name=".game_counter.BasketballCounter" />
